@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeTest;
 
 
 public class AppStatusTest {
-	public String st = System.setProperty("webdriver.chrome.driver", "ChromeDriver\\ChromedriverLinux");
+	public String st = System.setProperty("webdriver.chrome.driver", "ChromeDriver/ChromedriverLinux");
 
 	public WebDriver driver = new ChromeDriver();
 
