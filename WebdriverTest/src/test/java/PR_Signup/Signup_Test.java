@@ -144,6 +144,6 @@ public class Signup_Test {
 	@AfterTest
 	public void afterTest() {
 
-		driver.quit();
+		//driver.quit();
 	}
 }
