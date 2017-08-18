@@ -22,9 +22,9 @@ public class Signup_Test {
 	//
 	// public WebDriver driver = new PhantomJSDriver();
 
-	public String st = System.setProperty("webdriver.gecko.driver", "/home/mpatil/chromedriver");
+	public String st = System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 
-	public  WebDriver driver = new FirefoxDriver();
+	public WebDriver driver = new ChromeDriver();
 
 	@Test(priority = 1)
 	public void CheckApp_Status() {
@@ -121,7 +121,7 @@ public class Signup_Test {
 		while (iterator.hasNext()) {
 			subWindowHandler = iterator.next();
 		}
-		driver.switchTo().window(subWindowHandler); // switch to popup window
+		driver.switchTo().window(subWindowHandler); 
 
 		Thread.sleep(5000);
 		String PopURL = driver.getCurrentUrl();
