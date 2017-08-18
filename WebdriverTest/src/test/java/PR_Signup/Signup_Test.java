@@ -22,7 +22,7 @@ public class Signup_Test {
 	//
 	// public WebDriver driver = new PhantomJSDriver();
 
-	public String st = System.setProperty("webdriver.gecko.driver", "home/mpatil/geckodriver");
+	public String st = System.setProperty("webdriver.gecko.driver", "/home/mpatil/geckodriver");
 
 	public  WebDriver driver = new FirefoxDriver();
 
