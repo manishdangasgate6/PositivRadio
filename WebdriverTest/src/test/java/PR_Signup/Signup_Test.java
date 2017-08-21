@@ -22,10 +22,15 @@ public class Signup_Test {
 	//
 	// public WebDriver driver = new PhantomJSDriver();
 
-	public String st = System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+	//Chrome Windows
+//	public String st = System.setProperty("webdriver.chrome.driver", "chromedriver");
+//    public WebDriver driver = new ChromeDriver();
 
-	public WebDriver driver = new ChromeDriver();
-
+	//Linux firefox
+    public String st = System.setProperty("webdriver.gicko.driver", "/home/mpatil/geckodriver");
+    public WebDriver driver = new FirefoxDriver();
+	
+	
 	@Test(priority = 1)
 	public void CheckApp_Status() {
 
@@ -34,7 +39,6 @@ public class Signup_Test {
 		System.out.print("Application is working");
 
 	}
-
 
 	@Test(priority = 2)
 	public void BlankEmail() {
@@ -121,7 +125,7 @@ public class Signup_Test {
 		while (iterator.hasNext()) {
 			subWindowHandler = iterator.next();
 		}
-		driver.switchTo().window(subWindowHandler); 
+		driver.switchTo().window(subWindowHandler); // switch to popup window
 
 		Thread.sleep(5000);
 		String PopURL = driver.getCurrentUrl();
@@ -131,6 +135,49 @@ public class Signup_Test {
 		driver.findElement(By.id("email")).sendKeys("arti.chouhantest@gmail.com");
 		driver.findElement(By.id("pass")).sendKeys("gatesix#12");
 		driver.findElement(By.name("login")).click();
+
+		driver.switchTo().window(parentWindowHandler);
+
+	}
+
+	@Test(priority = 8)
+	public void Invalid_EmailLogin() {
+
+		driver.get("http://positivradio.test.gate6.com/web/#/login");
+		driver.findElement(By.name("email")).sendKeys("manish.dangas@gate62.com");
+		driver.findElement(By.name("password")).sendKeys("gate6@123");
+		driver.findElement(By.cssSelector("button.btn.custom-btn")).click();
+		String URL = driver.getCurrentUrl();
+
+		Assert.assertEquals(URL, "http://positivradio.test.gate6.com/web/#/login");
+
+	}
+
+	@Test(priority = 9)
+	public void Invalid_PasswordLogin() {
+
+		driver.get("http://positivradio.test.gate6.com/web/#/login");
+		driver.findElement(By.name("email")).sendKeys("manish.dangas@gate6.com");
+		driver.findElement(By.name("password")).sendKeys("gatesix#12");
+		driver.findElement(By.cssSelector("button.btn.custom-btn")).click();
+		String URL = driver.getCurrentUrl();
+
+		Assert.assertEquals(URL, "http://positivradio.test.gate6.com/web/#/login");
+
+	}
+
+	@Test(priority = 10)
+	public void Valid_Login() throws InterruptedException {
+
+		driver.get("http://positivradio.test.gate6.com/web/#/login");
+		driver.findElement(By.name("email")).sendKeys("manish.dangas@gate6.com");
+		driver.findElement(By.name("password")).sendKeys("Gate6@123");
+		driver.findElement(By.cssSelector("button.btn.custom-btn")).click();
+		Thread.sleep(2000);
+
+		String URL = driver.getCurrentUrl();
+
+		Assert.assertEquals(URL, "http://positivradio.test.gate6.com/web/#/");
 
 	}
 
@@ -144,6 +191,6 @@ public class Signup_Test {
 	@AfterTest
 	public void afterTest() {
 
-		//driver.quit();
+		// driver.quit();
 	}
 }
