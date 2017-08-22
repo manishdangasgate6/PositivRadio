@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [PR_Signup.SignupTest]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="PR_Signup.SignupTest">
+        <methods>
+          <include name="FaceBookSignup"/>
+          <include name="ValidSignup"/>
+          <include name="CheckApp_Status"/>
+          <include name="InvalidEmail"/>
+          <include name="BlankEmail"/>
+          <include name="InvalidPassword"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="BlankFullName"/>
+        </methods>
+      </class> <!-- PR_Signup.SignupTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [PR_Signup.SignupTest] -->

@@ -31,87 +31,679 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Command line test</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">8</td><td class="numi">0</td><td class="numi">28.2 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Command line test</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">28</td><td class="numi">73.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Command line test &#8212; failed (configuration methods)</th></tr>
-<tr class="failedodd"><td rowspan="1">example.NewTest</td><td><a href="#m1"><b>beforeTest</b>  </a></td><td class="numi">1</td><td>1502961311857</td><td class="numi">0</td></tr>
-<tr><th colspan="4">Command line test &#8212; skipped (configuration methods)</th></tr>
-<tr class="skippedodd"><td rowspan="1">PR_Signup.BlankFullNameTest</td><td><a href="#m2"><b>afterTest</b>  </a></td><td class="numi">1</td><td>1502961315973</td><td class="numi">0</td></tr>
-<tr class="skippedeven"><td rowspan="1">example.NewTest</td><td><a href="#m3"><b>afterTest</b>  </a></td><td class="numi">1</td><td>1502961315974</td><td class="numi">0</td></tr>
-<tr class="skippedodd"><td rowspan="1">PR_Signup.InvalidEmailTest</td><td><a href="#m4"><b>afterTest</b>  </a></td><td class="numi">1</td><td>1502961315974</td><td class="numi">0</td></tr>
-<tr class="skippedeven"><td rowspan="1">PR_Signup.SocialFacebookSignUpTest</td><td><a href="#m5"><b>beforeTest</b>  </a></td><td class="numi">1</td><td>1502961315958</td><td class="numi">0</td></tr>
-<tr class="skippedodd"><td rowspan="1">PR_Signup.ValidSignupTest</td><td><a href="#m6"><b>afterTest</b>  </a></td><td class="numi">1</td><td>1502961315974</td><td class="numi">0</td></tr>
-<tr class="skippedeven"><td rowspan="1">PR_Signup.BlankEmailTest</td><td><a href="#m7"><b>afterTest</b>  </a></td><td class="numi">1</td><td>1502961315973</td><td class="numi">0</td></tr>
-<tr class="skippedodd"><td rowspan="1">PR_Signup.SocialFacebookSignUpTest</td><td><a href="#m8"><b>afterTest</b>  </a></td><td class="numi">1</td><td>1502961315974</td><td class="numi">0</td></tr>
-<tr class="skippedeven"><td rowspan="1">PR_Signup.AppStatusTest</td><td><a href="#m9"><b>afterTest</b>  </a></td><td class="numi">1</td><td>1502961315973</td><td class="numi">0</td></tr>
-<tr class="skippedodd"><td rowspan="1">PR_Signup.ValidSignupTest</td><td><a href="#m10"><b>beforeTest</b>  </a></td><td class="numi">1</td><td>1502961315958</td><td class="numi">0</td></tr>
-<tr><th colspan="4">Command line test &#8212; skipped</th></tr>
-<tr class="skippedodd"><td rowspan="1">PR_Signup.AppStatusTest</td><td><a href="#m11"><b>CheckApp_Status</b>  </a></td><td class="numi">1</td><td>1502961315967</td><td class="numi">1</td></tr>
-<tr class="skippedeven"><td rowspan="1">PR_Signup.BlankEmailTest</td><td><a href="#m12"><b>Email_Validation</b>  </a></td><td class="numi">1</td><td>1502961315968</td><td class="numi">0</td></tr>
-<tr class="skippedodd"><td rowspan="1">PR_Signup.SocialFacebookSignUpTest</td><td><a href="#m13"><b>Email_Validation</b>  </a></td><td class="numi">1</td><td>1502961315970</td><td class="numi">0</td></tr>
-<tr class="skippedeven"><td rowspan="1">PR_Signup.ValidSignupTest</td><td><a href="#m14"><b>Email_Validation</b>  </a></td><td class="numi">1</td><td>1502961315971</td><td class="numi">0</td></tr>
-<tr class="skippedodd"><td rowspan="1">PR_Signup.BlankFullNameTest</td><td><a href="#m15"><b>FullName_Validation</b>  </a></td><td class="numi">1</td><td>1502961315969</td><td class="numi">0</td></tr>
-<tr class="skippedeven"><td rowspan="2">PR_Signup.InvalidEmailTest</td><td><a href="#m16"><b>InvalidEmail_Validation1</b>  </a></td><td class="numi">1</td><td>1502961315971</td><td class="numi">0</td></tr><tr class="skippedeven"><td><a href="#m17"><b>InvalidEmail_Validation12</b>  </a></td><td class="numi">1</td><td>1502961315972</td><td class="numi">0</td></tr>
-<tr class="skippedodd"><td rowspan="1">example.NewTest</td><td><a href="#m18"><b>testEasy</b>  </a></td><td class="numi">1</td><td>1502961315969</td><td class="numi">1</td></tr>
+<tr><th colspan="4">Command line test &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">PR_Signup.SampleTest</td><td><a href="#m1"><b>BlankEmail</b>  </a></td><td class="numi">1</td><td>1503403281023</td><td class="numi">8</td></tr>
+<tr class="failedeven"><td rowspan="1">PR_Signup.Signup_Test</td><td><a href="#m2"><b>BlankEmail</b>  </a></td><td class="numi">1</td><td>1503403281033</td><td class="numi">9</td></tr>
+<tr class="failedodd"><td rowspan="1">PR_Signup.SampleTest</td><td><a href="#m3"><b>BlankFullName</b>  </a></td><td class="numi">1</td><td>1503403281045</td><td class="numi">9</td></tr>
+<tr class="failedeven"><td rowspan="1">PR_Signup.Signup_Test</td><td><a href="#m4"><b>BlankFullName</b>  </a></td><td class="numi">1</td><td>1503403281056</td><td class="numi">10</td></tr>
+<tr class="failedodd"><td rowspan="1">PR_Signup.SampleTest</td><td><a href="#m5"><b>CheckApp_Status</b>  </a></td><td class="numi">1</td><td>1503403229348</td><td class="numi">49361</td></tr>
+<tr class="failedeven"><td rowspan="1">PR_Signup.Signup_Test</td><td><a href="#m6"><b>CheckApp_Status</b>  </a></td><td class="numi">1</td><td>1503403278998</td><td class="numi">2014</td></tr>
+<tr class="failedodd"><td rowspan="1">PR_Signup.SampleTest</td><td><a href="#m7"><b>FaceBookSignup</b>  </a></td><td class="numi">1</td><td>1503403281122</td><td class="numi">16</td></tr>
+<tr class="failedeven"><td rowspan="1">PR_Signup.Signup_Test</td><td><a href="#m8"><b>FaceBookSignup</b>  </a></td><td class="numi">1</td><td>1503403281140</td><td class="numi">11</td></tr>
+<tr class="failedodd"><td rowspan="1">PR_Signup.SampleTest</td><td><a href="#m9"><b>Forgot_Password_with_invalid__user</b>  </a></td><td class="numi">1</td><td>1503403291383</td><td class="numi">5010</td></tr>
+<tr class="failedeven"><td rowspan="1">PR_Signup.Signup_Test</td><td><a href="#m10"><b>Forgot_Password_with_invalid__user</b>  </a></td><td class="numi">1</td><td>1503403296395</td><td class="numi">5008</td></tr>
+<tr class="failedodd"><td rowspan="1">PR_Signup.SampleTest</td><td><a href="#m11"><b>Forgot_Password_with_registerd_user</b>  </a></td><td class="numi">1</td><td>1503403281366</td><td class="numi">5006</td></tr>
+<tr class="failedeven"><td rowspan="1">PR_Signup.Signup_Test</td><td><a href="#m12"><b>Forgot_Password_with_registerd_user</b>  </a></td><td class="numi">1</td><td>1503403286373</td><td class="numi">5008</td></tr>
+<tr class="failedodd"><td rowspan="1">PR_Signup.SampleTest</td><td><a href="#m13"><b>GoogleSignup</b>  </a></td><td class="numi">1</td><td>1503403281154</td><td class="numi">21</td></tr>
+<tr class="failedeven"><td rowspan="1">PR_Signup.Signup_Test</td><td><a href="#m14"><b>GoogleSignup</b>  </a></td><td class="numi">1</td><td>1503403281177</td><td class="numi">12</td></tr>
+<tr class="failedodd"><td rowspan="1">PR_Signup.SampleTest</td><td><a href="#m15"><b>InvalidEmail</b>  </a></td><td class="numi">1</td><td>1503403281068</td><td class="numi">7</td></tr>
+<tr class="failedeven"><td rowspan="1">PR_Signup.Signup_Test</td><td><a href="#m16"><b>InvalidEmail</b>  </a></td><td class="numi">1</td><td>1503403281077</td><td class="numi">6</td></tr>
+<tr class="failedodd"><td rowspan="1">PR_Signup.SampleTest</td><td><a href="#m17"><b>InvalidPassword</b>  </a></td><td class="numi">1</td><td>1503403281084</td><td class="numi">6</td></tr>
+<tr class="failedeven"><td rowspan="1">PR_Signup.Signup_Test</td><td><a href="#m18"><b>InvalidPassword</b>  </a></td><td class="numi">1</td><td>1503403281092</td><td class="numi">5</td></tr>
+<tr class="failedodd"><td rowspan="1">PR_Signup.SampleTest</td><td><a href="#m19"><b>Invalid_EmailLogin</b>  </a></td><td class="numi">1</td><td>1503403281191</td><td class="numi">17</td></tr>
+<tr class="failedeven"><td rowspan="1">PR_Signup.Signup_Test</td><td><a href="#m20"><b>Invalid_EmailLogin</b>  </a></td><td class="numi">1</td><td>1503403281211</td><td class="numi">7</td></tr>
+<tr class="failedodd"><td rowspan="1">PR_Signup.SampleTest</td><td><a href="#m21"><b>Invalid_PasswordLogin</b>  </a></td><td class="numi">1</td><td>1503403281220</td><td class="numi">27</td></tr>
+<tr class="failedeven"><td rowspan="1">PR_Signup.Signup_Test</td><td><a href="#m22"><b>Invalid_PasswordLogin</b>  </a></td><td class="numi">1</td><td>1503403281249</td><td class="numi">8</td></tr>
+<tr class="failedodd"><td rowspan="1">PR_Signup.SampleTest</td><td><a href="#m23"><b>Logout_Test</b>  </a></td><td class="numi">1</td><td>1503403281294</td><td class="numi">57</td></tr>
+<tr class="failedeven"><td rowspan="1">PR_Signup.Signup_Test</td><td><a href="#m24"><b>Logout_Test</b>  </a></td><td class="numi">1</td><td>1503403281352</td><td class="numi">12</td></tr>
+<tr class="failedodd"><td rowspan="1">PR_Signup.SampleTest</td><td><a href="#m25"><b>ValidSignup</b>  </a></td><td class="numi">1</td><td>1503403281099</td><td class="numi">7</td></tr>
+<tr class="failedeven"><td rowspan="1">PR_Signup.Signup_Test</td><td><a href="#m26"><b>ValidSignup</b>  </a></td><td class="numi">1</td><td>1503403281108</td><td class="numi">8</td></tr>
+<tr class="failedodd"><td rowspan="1">PR_Signup.SampleTest</td><td><a href="#m27"><b>Valid_Login</b>  </a></td><td class="numi">1</td><td>1503403281259</td><td class="numi">15</td></tr>
+<tr class="failedeven"><td rowspan="1">PR_Signup.Signup_Test</td><td><a href="#m28"><b>Valid_Login</b>  </a></td><td class="numi">1</td><td>1503403281282</td><td class="numi">11</td></tr>
 </table>
 <h1>Command line test</h1>
-<h2 id="m1">example.NewTest:beforeTest</h2>
+<h2 id="m1">PR_Signup.Signup_Test:CheckApp_Status</h2>
 <div style="padding-left:3em">
-<p>chrome not reachable
-  (Session info: chrome=60.0.3112.90)
-  (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.02 seconds
+<p>Failed to decode response from marionette
 Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
 System info: host: &apos;GATE6-70&apos;, ip: &apos;10.1.0.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\Owner\AppData\Local\Temp\scoped_dir10868_14794}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.90, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 97134502b42b9a0a3eb0ca02e3ceedac</p>
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Owner\AppData\Local\Temp\rust_mozprofile.HdjueGuvsrUC, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.2, platformVersion=10.0, moz:processID=5668.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 41b85fcd-ca69-4646-863b-d3974e06f6fb</p>
 sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 <br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 <br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 <br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
-<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
 <br/>at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
-<br/>at example.NewTest.beforeTest(NewTest.java:27)
-<br/>33 lines not shown
+<br/>at PR_Signup.Signup_Test.CheckApp_Status(Signup_Test.java:37)
+<br/>35 lines not shown
 </div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">PR_Signup.BlankFullNameTest:afterTest</h2>
+<h2 id="m2">PR_Signup.SampleTest:InvalidEmail</h2>
+<div style="padding-left:3em">
+<p>Tried to run command without establishing a connection
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GATE6-70&apos;, ip: &apos;10.1.0.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Owner\AppData\Local\Temp\rust_mozprofile.a8rgTENXWEUp, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.2, platformVersion=10.0, moz:processID=7416.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 82e430ce-6891-46c3-938f-d76e63ceebc4</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+<br/>at PR_Signup.SampleTest.InvalidEmail(SampleTest.java:85)
+<br/>35 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">example.NewTest:afterTest</h2>
+<h2 id="m3">PR_Signup.Signup_Test:InvalidEmail</h2>
+<div style="padding-left:3em">
+<p>Tried to run command without establishing a connection
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GATE6-70&apos;, ip: &apos;10.1.0.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Owner\AppData\Local\Temp\rust_mozprofile.HdjueGuvsrUC, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.2, platformVersion=10.0, moz:processID=5668.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 41b85fcd-ca69-4646-863b-d3974e06f6fb</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+<br/>at PR_Signup.Signup_Test.InvalidEmail(Signup_Test.java:74)
+<br/>35 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">PR_Signup.InvalidEmailTest:afterTest</h2>
+<h2 id="m4">PR_Signup.SampleTest:BlankFullName</h2>
+<div style="padding-left:3em">
+<p>Tried to run command without establishing a connection
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GATE6-70&apos;, ip: &apos;10.1.0.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Owner\AppData\Local\Temp\rust_mozprofile.a8rgTENXWEUp, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.2, platformVersion=10.0, moz:processID=7416.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 82e430ce-6891-46c3-938f-d76e63ceebc4</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+<br/>at PR_Signup.SampleTest.BlankFullName(SampleTest.java:71)
+<br/>35 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">PR_Signup.SocialFacebookSignUpTest:beforeTest</h2>
+<h2 id="m5">PR_Signup.Signup_Test:Forgot_Password_with_registerd_user</h2>
+<div style="padding-left:3em">
+<p>Tried to run command without establishing a connection
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GATE6-70&apos;, ip: &apos;10.1.0.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Owner\AppData\Local\Temp\rust_mozprofile.HdjueGuvsrUC, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.2, platformVersion=10.0, moz:processID=5668.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 41b85fcd-ca69-4646-863b-d3974e06f6fb</p>
+sun.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+<br/>at PR_Signup.Signup_Test.Forgot_Password_with_registerd_user(Signup_Test.java:229)
+<br/>35 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m6">PR_Signup.ValidSignupTest:afterTest</h2>
+<h2 id="m6">PR_Signup.SampleTest:Forgot_Password_with_invalid__user</h2>
+<div style="padding-left:3em">
+<p>Tried to run command without establishing a connection
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GATE6-70&apos;, ip: &apos;10.1.0.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Owner\AppData\Local\Temp\rust_mozprofile.a8rgTENXWEUp, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.2, platformVersion=10.0, moz:processID=7416.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 82e430ce-6891-46c3-938f-d76e63ceebc4</p>
+sun.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+<br/>at PR_Signup.SampleTest.Forgot_Password_with_invalid__user(SampleTest.java:254)
+<br/>35 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m7">PR_Signup.BlankEmailTest:afterTest</h2>
+<h2 id="m7">PR_Signup.SampleTest:Invalid_PasswordLogin</h2>
+<div style="padding-left:3em">
+<p>Tried to run command without establishing a connection
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GATE6-70&apos;, ip: &apos;10.1.0.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Owner\AppData\Local\Temp\rust_mozprofile.a8rgTENXWEUp, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.2, platformVersion=10.0, moz:processID=7416.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 82e430ce-6891-46c3-938f-d76e63ceebc4</p>
+sun.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+<br/>at PR_Signup.SampleTest.Invalid_PasswordLogin(SampleTest.java:202)
+<br/>35 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m8">PR_Signup.SocialFacebookSignUpTest:afterTest</h2>
+<h2 id="m8">PR_Signup.SampleTest:BlankEmail</h2>
+<div style="padding-left:3em">
+<p>Tried to run command without establishing a connection
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GATE6-70&apos;, ip: &apos;10.1.0.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Owner\AppData\Local\Temp\rust_mozprofile.a8rgTENXWEUp, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.2, platformVersion=10.0, moz:processID=7416.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 82e430ce-6891-46c3-938f-d76e63ceebc4</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+<br/>at PR_Signup.SampleTest.BlankEmail(SampleTest.java:57)
+<br/>35 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m9">PR_Signup.AppStatusTest:afterTest</h2>
+<h2 id="m9">PR_Signup.SampleTest:FaceBookSignup</h2>
+<div style="padding-left:3em">
+<p>Tried to run command without establishing a connection
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GATE6-70&apos;, ip: &apos;10.1.0.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Owner\AppData\Local\Temp\rust_mozprofile.a8rgTENXWEUp, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.2, platformVersion=10.0, moz:processID=7416.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 82e430ce-6891-46c3-938f-d76e63ceebc4</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+<br/>at PR_Signup.SampleTest.FaceBookSignup(SampleTest.java:128)
+<br/>35 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m10">PR_Signup.ValidSignupTest:beforeTest</h2>
+<h2 id="m10">PR_Signup.SampleTest:ValidSignup</h2>
+<div style="padding-left:3em">
+<p>Tried to run command without establishing a connection
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GATE6-70&apos;, ip: &apos;10.1.0.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Owner\AppData\Local\Temp\rust_mozprofile.a8rgTENXWEUp, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.2, platformVersion=10.0, moz:processID=7416.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 82e430ce-6891-46c3-938f-d76e63ceebc4</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+<br/>at PR_Signup.SampleTest.ValidSignup(SampleTest.java:114)
+<br/>35 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m11">PR_Signup.InvalidEmailTest:InvalidEmail_Validation12</h2>
+<h2 id="m11">PR_Signup.SampleTest:Valid_Login</h2>
+<div style="padding-left:3em">
+<p>Tried to run command without establishing a connection
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GATE6-70&apos;, ip: &apos;10.1.0.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Owner\AppData\Local\Temp\rust_mozprofile.a8rgTENXWEUp, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.2, platformVersion=10.0, moz:processID=7416.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 82e430ce-6891-46c3-938f-d76e63ceebc4</p>
+sun.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+<br/>at PR_Signup.SampleTest.Valid_Login(SampleTest.java:215)
+<br/>35 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m12">PR_Signup.BlankEmailTest:Email_Validation</h2>
+<h2 id="m12">PR_Signup.SampleTest:Forgot_Password_with_registerd_user</h2>
+<div style="padding-left:3em">
+<p>Tried to run command without establishing a connection
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GATE6-70&apos;, ip: &apos;10.1.0.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Owner\AppData\Local\Temp\rust_mozprofile.a8rgTENXWEUp, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.2, platformVersion=10.0, moz:processID=7416.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 82e430ce-6891-46c3-938f-d76e63ceebc4</p>
+sun.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+<br/>at PR_Signup.SampleTest.Forgot_Password_with_registerd_user(SampleTest.java:240)
+<br/>35 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m13">PR_Signup.ValidSignupTest:Email_Validation</h2>
+<h2 id="m13">PR_Signup.Signup_Test:FaceBookSignup</h2>
+<div style="padding-left:3em">
+<p>Tried to run command without establishing a connection
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GATE6-70&apos;, ip: &apos;10.1.0.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Owner\AppData\Local\Temp\rust_mozprofile.HdjueGuvsrUC, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.2, platformVersion=10.0, moz:processID=5668.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 41b85fcd-ca69-4646-863b-d3974e06f6fb</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+<br/>at PR_Signup.Signup_Test.FaceBookSignup(Signup_Test.java:117)
+<br/>35 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m14">PR_Signup.InvalidEmailTest:InvalidEmail_Validation1</h2>
+<h2 id="m14">PR_Signup.Signup_Test:Valid_Login</h2>
+<div style="padding-left:3em">
+<p>Tried to run command without establishing a connection
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GATE6-70&apos;, ip: &apos;10.1.0.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Owner\AppData\Local\Temp\rust_mozprofile.HdjueGuvsrUC, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.2, platformVersion=10.0, moz:processID=5668.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 41b85fcd-ca69-4646-863b-d3974e06f6fb</p>
+sun.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+<br/>at PR_Signup.Signup_Test.Valid_Login(Signup_Test.java:204)
+<br/>35 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m15">PR_Signup.SocialFacebookSignUpTest:Email_Validation</h2>
+<h2 id="m15">PR_Signup.SampleTest:InvalidPassword</h2>
+<div style="padding-left:3em">
+<p>Tried to run command without establishing a connection
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GATE6-70&apos;, ip: &apos;10.1.0.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Owner\AppData\Local\Temp\rust_mozprofile.a8rgTENXWEUp, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.2, platformVersion=10.0, moz:processID=7416.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 82e430ce-6891-46c3-938f-d76e63ceebc4</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+<br/>at PR_Signup.SampleTest.InvalidPassword(SampleTest.java:100)
+<br/>35 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m16">PR_Signup.AppStatusTest:CheckApp_Status</h2>
+<h2 id="m16">PR_Signup.SampleTest:GoogleSignup</h2>
+<div style="padding-left:3em">
+<p>Tried to run command without establishing a connection
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GATE6-70&apos;, ip: &apos;10.1.0.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Owner\AppData\Local\Temp\rust_mozprofile.a8rgTENXWEUp, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.2, platformVersion=10.0, moz:processID=7416.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 82e430ce-6891-46c3-938f-d76e63ceebc4</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+<br/>at PR_Signup.SampleTest.GoogleSignup(SampleTest.java:157)
+<br/>35 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m17">example.NewTest:testEasy</h2>
+<h2 id="m17">PR_Signup.Signup_Test:Logout_Test</h2>
+<div style="padding-left:3em">
+<p>Tried to run command without establishing a connection
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GATE6-70&apos;, ip: &apos;10.1.0.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Owner\AppData\Local\Temp\rust_mozprofile.HdjueGuvsrUC, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.2, platformVersion=10.0, moz:processID=5668.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 41b85fcd-ca69-4646-863b-d3974e06f6fb
+*** Element info: {Using=css selector, value=button.btn-signout.radius8px}</p>
+sun.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:501)
+<br/>at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+<br/>at PR_Signup.Signup_Test.Logout_Test(Signup_Test.java:221)
+<br/>35 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m18">PR_Signup.BlankFullNameTest:FullName_Validation</h2>
+<h2 id="m18">PR_Signup.SampleTest:Invalid_EmailLogin</h2>
+<div style="padding-left:3em">
+<p>Tried to run command without establishing a connection
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GATE6-70&apos;, ip: &apos;10.1.0.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Owner\AppData\Local\Temp\rust_mozprofile.a8rgTENXWEUp, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.2, platformVersion=10.0, moz:processID=7416.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 82e430ce-6891-46c3-938f-d76e63ceebc4</p>
+sun.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+<br/>at PR_Signup.SampleTest.Invalid_EmailLogin(SampleTest.java:189)
+<br/>35 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m19">PR_Signup.Signup_Test:BlankFullName</h2>
+<div style="padding-left:3em">
+<p>Tried to run command without establishing a connection
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GATE6-70&apos;, ip: &apos;10.1.0.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Owner\AppData\Local\Temp\rust_mozprofile.HdjueGuvsrUC, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.2, platformVersion=10.0, moz:processID=5668.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 41b85fcd-ca69-4646-863b-d3974e06f6fb</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+<br/>at PR_Signup.Signup_Test.BlankFullName(Signup_Test.java:60)
+<br/>35 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m20">PR_Signup.SampleTest:Logout_Test</h2>
+<div style="padding-left:3em">
+<p>Tried to run command without establishing a connection
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GATE6-70&apos;, ip: &apos;10.1.0.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Owner\AppData\Local\Temp\rust_mozprofile.a8rgTENXWEUp, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.2, platformVersion=10.0, moz:processID=7416.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 82e430ce-6891-46c3-938f-d76e63ceebc4
+*** Element info: {Using=css selector, value=button.btn-signout.radius8px}</p>
+sun.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:501)
+<br/>at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+<br/>at PR_Signup.SampleTest.Logout_Test(SampleTest.java:232)
+<br/>35 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m21">PR_Signup.Signup_Test:ValidSignup</h2>
+<div style="padding-left:3em">
+<p>Tried to run command without establishing a connection
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GATE6-70&apos;, ip: &apos;10.1.0.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Owner\AppData\Local\Temp\rust_mozprofile.HdjueGuvsrUC, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.2, platformVersion=10.0, moz:processID=5668.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 41b85fcd-ca69-4646-863b-d3974e06f6fb</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+<br/>at PR_Signup.Signup_Test.ValidSignup(Signup_Test.java:103)
+<br/>35 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m22">PR_Signup.Signup_Test:BlankEmail</h2>
+<div style="padding-left:3em">
+<p>Tried to run command without establishing a connection
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GATE6-70&apos;, ip: &apos;10.1.0.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Owner\AppData\Local\Temp\rust_mozprofile.HdjueGuvsrUC, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.2, platformVersion=10.0, moz:processID=5668.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 41b85fcd-ca69-4646-863b-d3974e06f6fb</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+<br/>at PR_Signup.Signup_Test.BlankEmail(Signup_Test.java:46)
+<br/>35 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m23">PR_Signup.Signup_Test:Invalid_PasswordLogin</h2>
+<div style="padding-left:3em">
+<p>Tried to run command without establishing a connection
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GATE6-70&apos;, ip: &apos;10.1.0.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Owner\AppData\Local\Temp\rust_mozprofile.HdjueGuvsrUC, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.2, platformVersion=10.0, moz:processID=5668.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 41b85fcd-ca69-4646-863b-d3974e06f6fb</p>
+sun.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+<br/>at PR_Signup.Signup_Test.Invalid_PasswordLogin(Signup_Test.java:191)
+<br/>35 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m24">PR_Signup.Signup_Test:InvalidPassword</h2>
+<div style="padding-left:3em">
+<p>Tried to run command without establishing a connection
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GATE6-70&apos;, ip: &apos;10.1.0.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Owner\AppData\Local\Temp\rust_mozprofile.HdjueGuvsrUC, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.2, platformVersion=10.0, moz:processID=5668.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 41b85fcd-ca69-4646-863b-d3974e06f6fb</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+<br/>at PR_Signup.Signup_Test.InvalidPassword(Signup_Test.java:89)
+<br/>35 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m25">PR_Signup.Signup_Test:Forgot_Password_with_invalid__user</h2>
+<div style="padding-left:3em">
+<p>Tried to run command without establishing a connection
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GATE6-70&apos;, ip: &apos;10.1.0.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Owner\AppData\Local\Temp\rust_mozprofile.HdjueGuvsrUC, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.2, platformVersion=10.0, moz:processID=5668.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 41b85fcd-ca69-4646-863b-d3974e06f6fb</p>
+sun.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+<br/>at PR_Signup.Signup_Test.Forgot_Password_with_invalid__user(Signup_Test.java:243)
+<br/>35 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m26">PR_Signup.SampleTest:CheckApp_Status</h2>
+<div style="padding-left:3em">
+<p>Failed to decode response from marionette
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GATE6-70&apos;, ip: &apos;10.1.0.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Owner\AppData\Local\Temp\rust_mozprofile.a8rgTENXWEUp, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.2, platformVersion=10.0, moz:processID=7416.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 82e430ce-6891-46c3-938f-d76e63ceebc4</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+<br/>at PR_Signup.SampleTest.CheckApp_Status(SampleTest.java:48)
+<br/>35 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m27">PR_Signup.Signup_Test:GoogleSignup</h2>
+<div style="padding-left:3em">
+<p>Tried to run command without establishing a connection
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GATE6-70&apos;, ip: &apos;10.1.0.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Owner\AppData\Local\Temp\rust_mozprofile.HdjueGuvsrUC, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.2, platformVersion=10.0, moz:processID=5668.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 41b85fcd-ca69-4646-863b-d3974e06f6fb</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+<br/>at PR_Signup.Signup_Test.GoogleSignup(Signup_Test.java:146)
+<br/>35 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m28">PR_Signup.Signup_Test:Invalid_EmailLogin</h2>
+<div style="padding-left:3em">
+<p>Tried to run command without establishing a connection
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GATE6-70&apos;, ip: &apos;10.1.0.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Owner\AppData\Local\Temp\rust_mozprofile.HdjueGuvsrUC, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=55.0.2, platformVersion=10.0, moz:processID=5668.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: 41b85fcd-ca69-4646-863b-d3974e06f6fb</p>
+sun.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+<br/>at PR_Signup.Signup_Test.Invalid_EmailLogin(Signup_Test.java:178)
+<br/>35 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

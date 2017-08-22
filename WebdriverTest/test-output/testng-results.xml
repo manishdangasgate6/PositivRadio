@@ -1,25 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="14" passed="14">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="29785" started-at="2017-08-17T11:40:39Z" finished-at="2017-08-17T11:41:09Z">
+  <suite name="Default suite" duration-ms="133839" started-at="2017-08-22T06:57:16Z" finished-at="2017-08-22T06:59:30Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="29785" started-at="2017-08-17T11:40:39Z" finished-at="2017-08-17T11:41:09Z">
-      <class name="PR_Signup.ValidSignupTest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:PR_Signup.ValidSignupTest@e350b40]" name="beforeTest" is-config="true" duration-ms="54" started-at="2017-08-17T17:10:39Z" finished-at="2017-08-17T17:10:39Z">
+    <test name="Default test" duration-ms="133839" started-at="2017-08-22T06:57:16Z" finished-at="2017-08-22T06:59:30Z">
+      <class name="PR_Signup.Signup_Test">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="beforeTest" is-config="true" duration-ms="1147" started-at="2017-08-22T12:27:16Z" finished-at="2017-08-22T12:27:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="Email_Validation()[pri:0, instance:PR_Signup.ValidSignupTest@e350b40]" name="Email_Validation" duration-ms="26585" started-at="2017-08-17T17:10:39Z" finished-at="2017-08-17T17:11:06Z">
+        <test-method status="PASS" signature="CheckApp_Status()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="CheckApp_Status" duration-ms="44915" started-at="2017-08-22T12:27:17Z" finished-at="2017-08-22T12:28:02Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Email_Validation -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:PR_Signup.ValidSignupTest@e350b40]" name="afterTest" is-config="true" duration-ms="3115" started-at="2017-08-17T17:11:06Z" finished-at="2017-08-17T17:11:09Z">
+        </test-method> <!-- CheckApp_Status -->
+        <test-method status="PASS" signature="BlankEmail()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="BlankEmail" duration-ms="675" started-at="2017-08-22T12:28:02Z" finished-at="2017-08-22T12:28:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BlankEmail -->
+        <test-method status="PASS" signature="BlankFullName()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="BlankFullName" duration-ms="3202" started-at="2017-08-22T12:28:03Z" finished-at="2017-08-22T12:28:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BlankFullName -->
+        <test-method status="PASS" signature="InvalidEmail()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="InvalidEmail" duration-ms="3297" started-at="2017-08-22T12:28:06Z" finished-at="2017-08-22T12:28:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidEmail -->
+        <test-method status="PASS" signature="InvalidPassword()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="InvalidPassword" duration-ms="3516" started-at="2017-08-22T12:28:09Z" finished-at="2017-08-22T12:28:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidPassword -->
+        <test-method status="PASS" signature="ValidSignup()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="ValidSignup" duration-ms="3727" started-at="2017-08-22T12:28:13Z" finished-at="2017-08-22T12:28:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidSignup -->
+        <test-method status="PASS" signature="FaceBookSignup()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="FaceBookSignup" duration-ms="10672" started-at="2017-08-22T12:28:16Z" finished-at="2017-08-22T12:28:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FaceBookSignup -->
+        <test-method status="PASS" signature="GoogleSignup()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="GoogleSignup" duration-ms="16745" started-at="2017-08-22T12:28:27Z" finished-at="2017-08-22T12:28:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GoogleSignup -->
+        <test-method status="PASS" signature="Invalid_EmailLogin()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="Invalid_EmailLogin" duration-ms="661" started-at="2017-08-22T12:28:44Z" finished-at="2017-08-22T12:28:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Invalid_EmailLogin -->
+        <test-method status="PASS" signature="Invalid_PasswordLogin()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="Invalid_PasswordLogin" duration-ms="3596" started-at="2017-08-22T12:28:44Z" finished-at="2017-08-22T12:28:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Invalid_PasswordLogin -->
+        <test-method status="PASS" signature="Valid_Login()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="Valid_Login" duration-ms="5633" started-at="2017-08-22T12:28:48Z" finished-at="2017-08-22T12:28:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Valid_Login -->
+        <test-method status="PASS" signature="Logout_Test()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="Logout_Test" duration-ms="5296" started-at="2017-08-22T12:28:54Z" finished-at="2017-08-22T12:28:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logout_Test -->
+        <test-method status="PASS" signature="Forgot_Password_with_registerd_user()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="Forgot_Password_with_registerd_user" duration-ms="15333" started-at="2017-08-22T12:28:59Z" finished-at="2017-08-22T12:29:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Forgot_Password_with_registerd_user -->
+        <test-method status="PASS" signature="Forgot_Password_with_invalid__user()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="Forgot_Password_with_invalid__user" duration-ms="15377" started-at="2017-08-22T12:29:14Z" finished-at="2017-08-22T12:29:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Forgot_Password_with_invalid__user -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="afterTest" is-config="true" duration-ms="1" started-at="2017-08-22T12:29:30Z" finished-at="2017-08-22T12:29:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- PR_Signup.ValidSignupTest -->
+      </class> <!-- PR_Signup.Signup_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -3,47 +3,46 @@
 <suite verbose="0" name="Failed suite [Command line suite]">
   <test name="Command line test(failed)">
     <classes>
-      <class name="PR_Signup.InvalidEmailTest">
-        <methods>
-          <include name="InvalidEmail_Validation1"/>
-          <include name="InvalidEmail_Validation12"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- PR_Signup.InvalidEmailTest -->
-      <class name="PR_Signup.ValidSignupTest">
-        <methods>
-          <include name="Email_Validation"/>
-        </methods>
-      </class> <!-- PR_Signup.ValidSignupTest -->
-      <class name="example.NewTest">
-        <methods>
-          <include name="testEasy"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- example.NewTest -->
-      <class name="PR_Signup.AppStatusTest">
+      <class name="PR_Signup.SampleTest">
         <methods>
           <include name="CheckApp_Status"/>
+          <include name="InvalidEmail"/>
+          <include name="Forgot_Password_with_invalid__user"/>
+          <include name="GoogleSignup"/>
+          <include name="Forgot_Password_with_registerd_user"/>
+          <include name="BlankEmail"/>
+          <include name="afterTest"/>
+          <include name="Invalid_PasswordLogin"/>
+          <include name="InvalidPassword"/>
+          <include name="Invalid_EmailLogin"/>
+          <include name="Valid_Login"/>
+          <include name="FaceBookSignup"/>
+          <include name="Logout_Test"/>
+          <include name="ValidSignup"/>
+          <include name="BlankFullName"/>
           <include name="beforeTest"/>
         </methods>
-      </class> <!-- PR_Signup.AppStatusTest -->
-      <class name="PR_Signup.BlankFullNameTest">
+      </class> <!-- PR_Signup.SampleTest -->
+      <class name="PR_Signup.Signup_Test">
         <methods>
-          <include name="FullName_Validation"/>
+          <include name="Invalid_EmailLogin"/>
+          <include name="Invalid_PasswordLogin"/>
+          <include name="Forgot_Password_with_registerd_user"/>
+          <include name="Valid_Login"/>
+          <include name="FaceBookSignup"/>
           <include name="beforeTest"/>
+          <include name="BlankFullName"/>
+          <include name="InvalidPassword"/>
+          <include name="ValidSignup"/>
+          <include name="Logout_Test"/>
+          <include name="InvalidEmail"/>
+          <include name="CheckApp_Status"/>
+          <include name="BlankEmail"/>
+          <include name="Forgot_Password_with_invalid__user"/>
+          <include name="GoogleSignup"/>
+          <include name="afterTest"/>
         </methods>
-      </class> <!-- PR_Signup.BlankFullNameTest -->
-      <class name="PR_Signup.BlankEmailTest">
-        <methods>
-          <include name="Email_Validation"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- PR_Signup.BlankEmailTest -->
-      <class name="PR_Signup.SocialFacebookSignUpTest">
-        <methods>
-          <include name="Email_Validation"/>
-        </methods>
-      </class> <!-- PR_Signup.SocialFacebookSignUpTest -->
+      </class> <!-- PR_Signup.Signup_Test -->
     </classes>
   </test> <!-- Command line test(failed) -->
 </suite> <!-- Failed suite [Command line suite] -->
