@@ -16,24 +16,31 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
 
-public class Signup_Test {
+public class SampleTest {
 	// public String st = System.setProperty("phantomjs.binary.path",
 	// file.getAbsolutePath());
 	//
 	// public WebDriver driver = new PhantomJSDriver();
 
 	// Chrome Windows
-	//public String st = System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-	//public WebDriver driver = new ChromeDriver();
+	public String st = System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+	public WebDriver driver = new ChromeDriver();
 
 	// Linux firefox
 	 //public String st = System.setProperty("webdriver.gecko.driver",
 	 //"/home/mpatil/geckodriver");
 	// public WebDriver driver = new FirefoxDriver();
+	
+//	public String st = System.setProperty("webdriver.gecko.driver", "E:\\FireFox\\geckodriver.exe");
+//		public WebDriver driver = new FirefoxDriver();
+		
+		// Chrome Windows
+//		public String st = System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+//		public WebDriver driver = new ChromeDriver();
 	 
 	 // Chrome Linux
-	public String st = System.setProperty("webdriver.chrome.driver", "/tmp/chromedriverLin");
-	public WebDriver driver = new ChromeDriver();
+	//public String st = System.setProperty("webdriver.chrome.driver", "/home/mpatil/chromedriverLin");
+	//public WebDriver driver = new ChromeDriver();
 
 	@Test(priority = 1)
 	public void CheckApp_Status() {
