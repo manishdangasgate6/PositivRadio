@@ -32,7 +32,7 @@ public class Signup_Test {
 	// public WebDriver driver = new FirefoxDriver();
 	 
 	 // Chrome Linux
-	public String st = System.setProperty("webdriver.chrome.driver", "/home/mpatil/chromedriverLin");
+	public String st = System.setProperty("webdriver.chrome.driver", "/tmp/chromedriverLin");
 	public WebDriver driver = new ChromeDriver();
 
 	@Test(priority = 1)
