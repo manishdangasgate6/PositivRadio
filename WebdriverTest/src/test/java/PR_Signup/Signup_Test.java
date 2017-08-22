@@ -27,9 +27,13 @@ public class Signup_Test {
 	//public WebDriver driver = new ChromeDriver();
 
 	// Linux firefox
-	 public String st = System.setProperty("webdriver.gecko.driver",
+	 //public String st = System.setProperty("webdriver.gecko.driver",
 	 "/home/mpatil/geckodriver");
-	 public WebDriver driver = new FirefoxDriver();
+	// public WebDriver driver = new FirefoxDriver();
+	 
+	 // Chrome Linux
+	public String st = System.setProperty("webdriver.chrome.driver", "/home/mpatil/chromedriverLin");
+	public WebDriver driver = new ChromeDriver();
 
 	@Test(priority = 1)
 	public void CheckApp_Status() {
