@@ -28,7 +28,7 @@ public class Signup_Test {
 
 	// Linux firefox
 	 //public String st = System.setProperty("webdriver.gecko.driver",
-	 "/home/mpatil/geckodriver");
+	 //"/home/mpatil/geckodriver");
 	// public WebDriver driver = new FirefoxDriver();
 	 
 	 // Chrome Linux
