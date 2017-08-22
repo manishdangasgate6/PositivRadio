@@ -22,15 +22,15 @@ public class Signup_Test {
 	//
 	// public WebDriver driver = new PhantomJSDriver();
 
-	//Chrome Windows
-//	public String st = System.setProperty("webdriver.chrome.driver", "chromedriver");
-//    public WebDriver driver = new ChromeDriver();
+	// Chrome Windows
+	public String st = System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+	public WebDriver driver = new ChromeDriver();
 
-	//Linux firefox
-    public String st = System.setProperty("webdriver.gecko.driver", "/home/mpatil/geckodriver");
-    public WebDriver driver = new FirefoxDriver();
-	
-	
+	// Linux firefox
+	// public String st = System.setProperty("webdriver.gecko.driver",
+	// "/home/mpatil/geckodriver");
+	// public WebDriver driver = new FirefoxDriver();
+
 	@Test(priority = 1)
 	public void CheckApp_Status() {
 
@@ -141,6 +141,38 @@ public class Signup_Test {
 	}
 
 	@Test(priority = 8)
+	public void GoogleSignup() throws InterruptedException {
+
+		driver.get("http://positivradio.test.gate6.com/web/#/register");
+		driver.findElement(By.cssSelector("button.google")).click();
+
+		String parentWindowHandler = driver.getWindowHandle(); // Store your parent window
+		String subWindowHandler = null;
+
+		Set<String> handles = driver.getWindowHandles(); // get all window handles
+		Iterator<String> iterator = handles.iterator();
+		while (iterator.hasNext()) {
+			subWindowHandler = iterator.next();
+		}
+		driver.switchTo().window(subWindowHandler); // switch to popup window
+
+		Thread.sleep(5000);
+		String PopURL = driver.getCurrentUrl();
+		System.out.println("TEst" + PopURL);
+		// Now you are in the popup window, perform necessary actions here
+
+		driver.findElement(By.id("identifierId")).sendKeys("gate6.info@gate6.com");
+		driver.findElement(By.xpath(".//*[@id='identifierNext']/content/span")).click();
+		Thread.sleep(4000);
+		driver.findElement(By.xpath(".//*[@id='password']/div[1]/div/div[1]/input")).sendKeys("Goole2010A!!");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath(".//*[@id='passwordNext']/content/span")).click();
+
+		driver.switchTo().window(parentWindowHandler);
+
+	}
+
+	@Test(priority = 9)
 	public void Invalid_EmailLogin() {
 
 		driver.get("http://positivradio.test.gate6.com/web/#/login");
@@ -153,7 +185,7 @@ public class Signup_Test {
 
 	}
 
-	@Test(priority = 9)
+	@Test(priority = 10)
 	public void Invalid_PasswordLogin() {
 
 		driver.get("http://positivradio.test.gate6.com/web/#/login");
@@ -166,7 +198,7 @@ public class Signup_Test {
 
 	}
 
-	@Test(priority = 10)
+	@Test(priority = 11)
 	public void Valid_Login() throws InterruptedException {
 
 		driver.get("http://positivradio.test.gate6.com/web/#/login");
@@ -178,6 +210,44 @@ public class Signup_Test {
 		String URL = driver.getCurrentUrl();
 
 		Assert.assertEquals(URL, "http://positivradio.test.gate6.com/web/#/");
+
+	}
+	
+	@Test(priority = 12)
+	public void Logout_Test() throws InterruptedException
+
+	{
+
+		driver.findElement(By.cssSelector("button.btn-signout.radius8px")).click();
+		Thread.sleep(5000);
+		driver.findElement(By.cssSelector("button.btn.default")).click();
+	}
+
+	@Test(priority = 13)
+	public void Forgot_Password_with_registerd_user() throws InterruptedException {
+		Thread.sleep(5000);
+		driver.get("http://positivradio.test.gate6.com/web/#/sendotp");
+		driver.findElement(By.name("email")).sendKeys("test12@gate6.com");
+		driver.findElement(By.cssSelector("button.btn.custom-btn")).click();
+
+		Thread.sleep(10000);
+		String URL_OTP = driver.getCurrentUrl();
+
+		Assert.assertEquals("http://positivradio.test.gate6.com/web/#/login", URL_OTP);
+
+	}
+
+	@Test(priority = 14)
+	public void Forgot_Password_with_invalid__user() throws InterruptedException {
+		Thread.sleep(5000);
+		driver.get("http://positivradio.test.gate6.com/web/#/sendotp");
+		driver.findElement(By.name("email")).sendKeys("t12est12@gate6.com");
+		driver.findElement(By.cssSelector("button.btn.custom-btn")).click();
+
+		Thread.sleep(10000);
+		String URL_OTP = driver.getCurrentUrl();
+
+		Assert.assertEquals("http://positivradio.test.gate6.com/web/#/sendotp", URL_OTP);
 
 	}
 
