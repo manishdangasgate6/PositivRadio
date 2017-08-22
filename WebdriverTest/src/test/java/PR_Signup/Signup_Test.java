@@ -23,13 +23,13 @@ public class Signup_Test {
 	// public WebDriver driver = new PhantomJSDriver();
 
 	// Chrome Windows
-	public String st = System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-	public WebDriver driver = new ChromeDriver();
+	//public String st = System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+	//public WebDriver driver = new ChromeDriver();
 
 	// Linux firefox
-	// public String st = System.setProperty("webdriver.gecko.driver",
-	// "/home/mpatil/geckodriver");
-	// public WebDriver driver = new FirefoxDriver();
+	 public String st = System.setProperty("webdriver.gecko.driver",
+	 "/home/mpatil/geckodriver");
+	 public WebDriver driver = new FirefoxDriver();
 
 	@Test(priority = 1)
 	public void CheckApp_Status() {
