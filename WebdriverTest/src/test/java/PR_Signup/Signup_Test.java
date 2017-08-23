@@ -23,24 +23,28 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
 public class Signup_Test {
 
-	
-	//WebDriver driver;
+	// WebDriver driver;
 	String baseUrl, nodeURL;
 
 	// Firefox Windows
 	public String st = System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 	public WebDriver driver = new ChromeDriver();
-	
+
+	// @BeforeTest
+	// public void setUp() throws MalformedURLException {
+	// //baseUrl = "https://stage1.tascportal.org";
+	// nodeURL = "http://10.1.0.144:5556/wd/hub";
+	// DesiredCapabilities capability = DesiredCapabilities.chrome();
+	// capability.setPlatform(Platform.WINDOWS);
+	// driver = new RemoteWebDriver(new URL(nodeURL), capability);
+	// driver.manage().window().maximize();
+	// }
+
 	@BeforeTest
-	public void setUp() throws MalformedURLException {
-		//baseUrl = "https://stage1.tascportal.org";
-		nodeURL = "http://10.1.0.144:5556/wd/hub";
-		DesiredCapabilities capability = DesiredCapabilities.chrome();
-		capability.setPlatform(Platform.WINDOWS);
-		driver = new RemoteWebDriver(new URL(nodeURL), capability);
+	public void Before() {
+
 		driver.manage().window().maximize();
 	}
 
@@ -230,7 +234,7 @@ public class Signup_Test {
 		Assert.assertEquals(URL, "http://positivradio.test.gate6.com/web/#/");
 
 	}
-	
+
 	@Test(priority = 12)
 	public void Logout_Test() throws InterruptedException
 
