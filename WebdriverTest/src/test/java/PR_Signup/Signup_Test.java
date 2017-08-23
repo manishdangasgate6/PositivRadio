@@ -1,30 +1,47 @@
 package PR_Signup;
 
 import java.io.File;
+import java.net.MalformedURLException;
 import java.util.Iterator;
 import java.util.Set;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
-import org.openqa.selenium.interactions.ClickAction;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
+import java.net.URL;
+import org.openqa.selenium.Platform;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 public class Signup_Test {
-	// public String st = System.setProperty("phantomjs.binary.path",
-	// file.getAbsolutePath());
-	//
-	// public WebDriver driver = new PhantomJSDriver();
+
+	
+	//WebDriver driver;
+	String baseUrl, nodeURL;
 
 	// Firefox Windows
 	public String st = System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 	public WebDriver driver = new ChromeDriver();
+	
+	
+	public void setUp() throws MalformedURLException {
+		//baseUrl = "https://stage1.tascportal.org";
+		nodeURL = "http://10.1.0.144:5556/wd/hub";
+		DesiredCapabilities capability = DesiredCapabilities.chrome();
+		capability.setPlatform(Platform.WINDOWS);
+		driver = new RemoteWebDriver(new URL(nodeURL), capability);
+	}
 
 	// Linux firefox
 	// public String st = System.setProperty("webdriver.gecko.driver",
