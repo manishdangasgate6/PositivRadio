@@ -34,13 +34,14 @@ public class Signup_Test {
 	public String st = System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 	public WebDriver driver = new ChromeDriver();
 	
-	
+	@BeforeTest
 	public void setUp() throws MalformedURLException {
 		//baseUrl = "https://stage1.tascportal.org";
 		nodeURL = "http://10.1.0.144:5556/wd/hub";
 		DesiredCapabilities capability = DesiredCapabilities.chrome();
 		capability.setPlatform(Platform.WINDOWS);
 		driver = new RemoteWebDriver(new URL(nodeURL), capability);
+		driver.manage().window().maximize();
 	}
 
 	// Linux firefox
