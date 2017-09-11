@@ -298,7 +298,7 @@ public class PositivWeb {
 
 		Screen s = new Screen();
 
-		s.find("C:/Jenkins/ImageValidate/Success.png"); // identify pause button
+		s.find("C:/Users/Owner/Desktop/Success.png"); // identify pause button
 
 	}
 
@@ -317,7 +317,7 @@ public class PositivWeb {
 
 		Screen s = new Screen();
 
-		s.find("C:/Jenkins/ImageValidate/PasswardSaved.png");
+		s.find("C:/Users/Owner/Desktop/PasswardSaved.png");
 
 	}
 
@@ -345,7 +345,7 @@ public class PositivWeb {
 
 		Screen s = new Screen();
 
-		s.find("C:/Jenkins/ImageValidate/Cardinof.png");
+		s.find("C:/Users/Owner/Desktop/Cardinof.png");
 
 	}
 

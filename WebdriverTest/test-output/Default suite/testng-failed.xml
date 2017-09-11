@@ -3,15 +3,14 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="PR_Signup.Signup_Test">
+      <class name="PR_Signup.PositivWeb">
         <methods>
-          <include name="Forgot_Password_with_registerd_user"/>
+          <include name="changePassword"/>
           <include name="beforeTest"/>
-          <include name="Forgot_Password_with_invalid__user"/>
+          <include name="Before"/>
           <include name="afterTest"/>
-          <include name="Logout_Test"/>
         </methods>
-      </class> <!-- PR_Signup.Signup_Test -->
+      </class> <!-- PR_Signup.PositivWeb -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -31,40 +31,74 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">14</td><td class="numi">14</td><td class="numi">0</td><td class="numi">0</td><td class="numi">133.8 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">16</td><td class="numi">16</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">284.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">Default test &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">PR_Signup.PositivWeb</td><td><a href="#m1"><b>changePassword</b>  </a></td><td class="numi">1</td><td>1505130364969</td><td class="numi">2067</td></tr>
 <tr><th colspan="4">Default test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="14">PR_Signup.Signup_Test</td><td><a href="#m1"><b>BlankEmail</b>  </a></td><td class="numi">1</td><td>1503385082404</td><td class="numi">675</td></tr><tr class="passedodd"><td><a href="#m2"><b>BlankFullName</b>  </a></td><td class="numi">1</td><td>1503385083080</td><td class="numi">3202</td></tr><tr class="passedodd"><td><a href="#m3"><b>CheckApp_Status</b>  </a></td><td class="numi">1</td><td>1503385037487</td><td class="numi">44915</td></tr><tr class="passedodd"><td><a href="#m4"><b>FaceBookSignup</b>  </a></td><td class="numi">1</td><td>1503385096829</td><td class="numi">10672</td></tr><tr class="passedodd"><td><a href="#m5"><b>Forgot_Password_with_invalid__user</b>  </a></td><td class="numi">1</td><td>1503385154782</td><td class="numi">15377</td></tr><tr class="passedodd"><td><a href="#m6"><b>Forgot_Password_with_registerd_user</b>  </a></td><td class="numi">1</td><td>1503385139446</td><td class="numi">15333</td></tr><tr class="passedodd"><td><a href="#m7"><b>GoogleSignup</b>  </a></td><td class="numi">1</td><td>1503385107505</td><td class="numi">16745</td></tr><tr class="passedodd"><td><a href="#m8"><b>InvalidEmail</b>  </a></td><td class="numi">1</td><td>1503385086284</td><td class="numi">3297</td></tr><tr class="passedodd"><td><a href="#m9"><b>InvalidPassword</b>  </a></td><td class="numi">1</td><td>1503385089583</td><td class="numi">3516</td></tr><tr class="passedodd"><td><a href="#m10"><b>Invalid_EmailLogin</b>  </a></td><td class="numi">1</td><td>1503385124253</td><td class="numi">661</td></tr><tr class="passedodd"><td><a href="#m11"><b>Invalid_PasswordLogin</b>  </a></td><td class="numi">1</td><td>1503385124916</td><td class="numi">3596</td></tr><tr class="passedodd"><td><a href="#m12"><b>Logout_Test</b>  </a></td><td class="numi">1</td><td>1503385134148</td><td class="numi">5296</td></tr><tr class="passedodd"><td><a href="#m13"><b>ValidSignup</b>  </a></td><td class="numi">1</td><td>1503385093101</td><td class="numi">3727</td></tr><tr class="passedodd"><td><a href="#m14"><b>Valid_Login</b>  </a></td><td class="numi">1</td><td>1503385128513</td><td class="numi">5633</td></tr>
+<tr class="passedodd"><td rowspan="16">PR_Signup.PositivWeb</td><td><a href="#m2"><b>CheckApp_Status</b>  </a></td><td class="numi">1</td><td>1505130091390</td><td class="numi">43437</td></tr><tr class="passedodd"><td><a href="#m3"><b>BlankEmail</b>  </a></td><td class="numi">1</td><td>1505130134829</td><td class="numi">9550</td></tr><tr class="passedodd"><td><a href="#m4"><b>BlankFullName</b>  </a></td><td class="numi">1</td><td>1505130144381</td><td class="numi">10810</td></tr><tr class="passedodd"><td><a href="#m5"><b>InvalidEmail</b>  </a></td><td class="numi">1</td><td>1505130155193</td><td class="numi">14263</td></tr><tr class="passedodd"><td><a href="#m6"><b>InvalidPassword</b>  </a></td><td class="numi">1</td><td>1505130169457</td><td class="numi">13652</td></tr><tr class="passedodd"><td><a href="#m7"><b>ValidSignup</b>  </a></td><td class="numi">1</td><td>1505130183110</td><td class="numi">13443</td></tr><tr class="passedodd"><td><a href="#m8"><b>FaceBookSignup</b>  </a></td><td class="numi">1</td><td>1505130196555</td><td class="numi">20599</td></tr><tr class="passedodd"><td><a href="#m9"><b>GoogleSignup</b>  </a></td><td class="numi">1</td><td>1505130217156</td><td class="numi">26272</td></tr><tr class="passedodd"><td><a href="#m10"><b>Invalid_EmailLogin</b>  </a></td><td class="numi">1</td><td>1505130243430</td><td class="numi">13862</td></tr><tr class="passedodd"><td><a href="#m11"><b>Invalid_PasswordLogin</b>  </a></td><td class="numi">1</td><td>1505130257293</td><td class="numi">14363</td></tr><tr class="passedodd"><td><a href="#m12"><b>Valid_Login</b>  </a></td><td class="numi">1</td><td>1505130271657</td><td class="numi">15467</td></tr><tr class="passedodd"><td><a href="#m13"><b>Logout_Test</b>  </a></td><td class="numi">1</td><td>1505130287126</td><td class="numi">5293</td></tr><tr class="passedodd"><td><a href="#m14"><b>Forgot_Password_with_registerd_user</b>  </a></td><td class="numi">1</td><td>1505130292420</td><td class="numi">27820</td></tr><tr class="passedodd"><td><a href="#m15"><b>Forgot_Password_with_invalid__user</b>  </a></td><td class="numi">1</td><td>1505130320242</td><td class="numi">27565</td></tr><tr class="passedodd"><td><a href="#m16"><b>Edit_profile</b>  </a></td><td class="numi">1</td><td>1505130347809</td><td class="numi">17159</td></tr><tr class="passedodd"><td><a href="#m17"><b>updateCard</b>  </a></td><td class="numi">1</td><td>1505130367042</td><td class="numi">7596</td></tr>
 </table>
 <h1>Default test</h1>
-<h2 id="m1">PR_Signup.Signup_Test:Logout_Test</h2>
+<h2 id="m1">PR_Signup.PositivWeb:changePassword</h2>
+<div style="padding-left:3em">
+<p>no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;action-button&apos;]//button[.=&apos;ChangePassword&apos;]&quot;}
+  (Session info: chrome=60.0.3112.113)
+  (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 59 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;GATE6-70&apos;, ip: &apos;192.168.237.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\Owner\AppData\Local\Temp\scoped_dir11336_12278}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.113, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: f5ad8c014ff5c4772e387e4debdca359
+*** Element info: {Using=xpath, value=//div[@class=&apos;action-button&apos;]//button[.=&apos;ChangePassword&apos;]}</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+<br/>at PR_Signup.PositivWeb.changePassword(PositivWeb.java:309)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">PR_Signup.Signup_Test:Valid_Login</h2>
+<h2 id="m2">PR_Signup.PositivWeb:Valid_Login</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">PR_Signup.Signup_Test:Invalid_PasswordLogin</h2>
+<h2 id="m3">PR_Signup.PositivWeb:Logout_Test</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">PR_Signup.Signup_Test:ValidSignup</h2>
+<h2 id="m4">PR_Signup.PositivWeb:InvalidEmail</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">PR_Signup.Signup_Test:CheckApp_Status</h2>
+<h2 id="m5">PR_Signup.PositivWeb:Forgot_Password_with_registerd_user</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m6">PR_Signup.Signup_Test:Invalid_EmailLogin</h2>
+<h2 id="m6">PR_Signup.PositivWeb:updateCard</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m7">PR_Signup.Signup_Test:InvalidPassword</h2>
+<h2 id="m7">PR_Signup.PositivWeb:CheckApp_Status</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m8">PR_Signup.Signup_Test:BlankFullName</h2>
+<h2 id="m8">PR_Signup.PositivWeb:InvalidPassword</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m9">PR_Signup.Signup_Test:FaceBookSignup</h2>
+<h2 id="m9">PR_Signup.PositivWeb:BlankEmail</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m10">PR_Signup.Signup_Test:Forgot_Password_with_invalid__user</h2>
+<h2 id="m10">PR_Signup.PositivWeb:Invalid_PasswordLogin</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m11">PR_Signup.Signup_Test:Forgot_Password_with_registerd_user</h2>
+<h2 id="m11">PR_Signup.PositivWeb:GoogleSignup</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m12">PR_Signup.Signup_Test:BlankEmail</h2>
+<h2 id="m12">PR_Signup.PositivWeb:Edit_profile</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m13">PR_Signup.Signup_Test:InvalidEmail</h2>
+<h2 id="m13">PR_Signup.PositivWeb:FaceBookSignup</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m14">PR_Signup.Signup_Test:GoogleSignup</h2>
+<h2 id="m14">PR_Signup.PositivWeb:Invalid_EmailLogin</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m15">PR_Signup.PositivWeb:Forgot_Password_with_invalid__user</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m16">PR_Signup.PositivWeb:BlankFullName</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m17">PR_Signup.PositivWeb:ValidSignup</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

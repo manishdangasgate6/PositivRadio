@@ -1,77 +1,158 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="14" passed="14">
+<testng-results skipped="0" failed="1" total="17" passed="16">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="133839" started-at="2017-08-22T06:57:16Z" finished-at="2017-08-22T06:59:30Z">
+  <suite name="Default suite" duration-ms="284436" started-at="2017-09-11T11:41:30Z" finished-at="2017-09-11T11:46:14Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="133839" started-at="2017-08-22T06:57:16Z" finished-at="2017-08-22T06:59:30Z">
-      <class name="PR_Signup.Signup_Test">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="beforeTest" is-config="true" duration-ms="1147" started-at="2017-08-22T12:27:16Z" finished-at="2017-08-22T12:27:17Z">
+    <test name="Default test" duration-ms="284436" started-at="2017-09-11T11:41:30Z" finished-at="2017-09-11T11:46:14Z">
+      <class name="PR_Signup.PositivWeb">
+        <test-method status="PASS" signature="Before()[pri:0, instance:PR_Signup.PositivWeb@6892b3b6]" name="Before" is-config="true" duration-ms="1164" started-at="2017-09-11T17:11:30Z" finished-at="2017-09-11T17:11:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Before -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:PR_Signup.PositivWeb@6892b3b6]" name="beforeTest" is-config="true" duration-ms="4" started-at="2017-09-11T17:11:31Z" finished-at="2017-09-11T17:11:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="CheckApp_Status()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="CheckApp_Status" duration-ms="44915" started-at="2017-08-22T12:27:17Z" finished-at="2017-08-22T12:28:02Z">
+        <test-method status="PASS" signature="CheckApp_Status()[pri:0, instance:PR_Signup.PositivWeb@6892b3b6]" name="CheckApp_Status" duration-ms="43437" started-at="2017-09-11T17:11:31Z" finished-at="2017-09-11T17:12:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckApp_Status -->
-        <test-method status="PASS" signature="BlankEmail()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="BlankEmail" duration-ms="675" started-at="2017-08-22T12:28:02Z" finished-at="2017-08-22T12:28:03Z">
+        <test-method status="PASS" signature="BlankEmail()[pri:0, instance:PR_Signup.PositivWeb@6892b3b6]" name="BlankEmail" duration-ms="9550" started-at="2017-09-11T17:12:14Z" finished-at="2017-09-11T17:12:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BlankEmail -->
-        <test-method status="PASS" signature="BlankFullName()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="BlankFullName" duration-ms="3202" started-at="2017-08-22T12:28:03Z" finished-at="2017-08-22T12:28:06Z">
+        <test-method status="PASS" signature="BlankFullName()[pri:0, instance:PR_Signup.PositivWeb@6892b3b6]" name="BlankFullName" duration-ms="10810" started-at="2017-09-11T17:12:24Z" finished-at="2017-09-11T17:12:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BlankFullName -->
-        <test-method status="PASS" signature="InvalidEmail()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="InvalidEmail" duration-ms="3297" started-at="2017-08-22T12:28:06Z" finished-at="2017-08-22T12:28:09Z">
+        <test-method status="PASS" signature="InvalidEmail()[pri:0, instance:PR_Signup.PositivWeb@6892b3b6]" name="InvalidEmail" duration-ms="14263" started-at="2017-09-11T17:12:35Z" finished-at="2017-09-11T17:12:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InvalidEmail -->
-        <test-method status="PASS" signature="InvalidPassword()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="InvalidPassword" duration-ms="3516" started-at="2017-08-22T12:28:09Z" finished-at="2017-08-22T12:28:13Z">
+        <test-method status="PASS" signature="InvalidPassword()[pri:0, instance:PR_Signup.PositivWeb@6892b3b6]" name="InvalidPassword" duration-ms="13652" started-at="2017-09-11T17:12:49Z" finished-at="2017-09-11T17:13:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InvalidPassword -->
-        <test-method status="PASS" signature="ValidSignup()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="ValidSignup" duration-ms="3727" started-at="2017-08-22T12:28:13Z" finished-at="2017-08-22T12:28:16Z">
+        <test-method status="PASS" signature="ValidSignup()[pri:0, instance:PR_Signup.PositivWeb@6892b3b6]" name="ValidSignup" duration-ms="13443" started-at="2017-09-11T17:13:03Z" finished-at="2017-09-11T17:13:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidSignup -->
-        <test-method status="PASS" signature="FaceBookSignup()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="FaceBookSignup" duration-ms="10672" started-at="2017-08-22T12:28:16Z" finished-at="2017-08-22T12:28:27Z">
+        <test-method status="PASS" signature="FaceBookSignup()[pri:0, instance:PR_Signup.PositivWeb@6892b3b6]" name="FaceBookSignup" duration-ms="20599" started-at="2017-09-11T17:13:16Z" finished-at="2017-09-11T17:13:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- FaceBookSignup -->
-        <test-method status="PASS" signature="GoogleSignup()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="GoogleSignup" duration-ms="16745" started-at="2017-08-22T12:28:27Z" finished-at="2017-08-22T12:28:44Z">
+        <test-method status="PASS" signature="GoogleSignup()[pri:0, instance:PR_Signup.PositivWeb@6892b3b6]" name="GoogleSignup" duration-ms="26272" started-at="2017-09-11T17:13:37Z" finished-at="2017-09-11T17:14:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GoogleSignup -->
-        <test-method status="PASS" signature="Invalid_EmailLogin()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="Invalid_EmailLogin" duration-ms="661" started-at="2017-08-22T12:28:44Z" finished-at="2017-08-22T12:28:44Z">
+        <test-method status="PASS" signature="Invalid_EmailLogin()[pri:0, instance:PR_Signup.PositivWeb@6892b3b6]" name="Invalid_EmailLogin" duration-ms="13862" started-at="2017-09-11T17:14:03Z" finished-at="2017-09-11T17:14:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Invalid_EmailLogin -->
-        <test-method status="PASS" signature="Invalid_PasswordLogin()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="Invalid_PasswordLogin" duration-ms="3596" started-at="2017-08-22T12:28:44Z" finished-at="2017-08-22T12:28:48Z">
+        <test-method status="PASS" signature="Invalid_PasswordLogin()[pri:0, instance:PR_Signup.PositivWeb@6892b3b6]" name="Invalid_PasswordLogin" duration-ms="14363" started-at="2017-09-11T17:14:17Z" finished-at="2017-09-11T17:14:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Invalid_PasswordLogin -->
-        <test-method status="PASS" signature="Valid_Login()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="Valid_Login" duration-ms="5633" started-at="2017-08-22T12:28:48Z" finished-at="2017-08-22T12:28:54Z">
+        <test-method status="PASS" signature="Valid_Login()[pri:0, instance:PR_Signup.PositivWeb@6892b3b6]" name="Valid_Login" duration-ms="15467" started-at="2017-09-11T17:14:31Z" finished-at="2017-09-11T17:14:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Valid_Login -->
-        <test-method status="PASS" signature="Logout_Test()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="Logout_Test" duration-ms="5296" started-at="2017-08-22T12:28:54Z" finished-at="2017-08-22T12:28:59Z">
+        <test-method status="PASS" signature="Logout_Test()[pri:0, instance:PR_Signup.PositivWeb@6892b3b6]" name="Logout_Test" duration-ms="5293" started-at="2017-09-11T17:14:47Z" finished-at="2017-09-11T17:14:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Logout_Test -->
-        <test-method status="PASS" signature="Forgot_Password_with_registerd_user()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="Forgot_Password_with_registerd_user" duration-ms="15333" started-at="2017-08-22T12:28:59Z" finished-at="2017-08-22T12:29:14Z">
+        <test-method status="PASS" signature="Forgot_Password_with_registerd_user()[pri:0, instance:PR_Signup.PositivWeb@6892b3b6]" name="Forgot_Password_with_registerd_user" duration-ms="27820" started-at="2017-09-11T17:14:52Z" finished-at="2017-09-11T17:15:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Forgot_Password_with_registerd_user -->
-        <test-method status="PASS" signature="Forgot_Password_with_invalid__user()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="Forgot_Password_with_invalid__user" duration-ms="15377" started-at="2017-08-22T12:29:14Z" finished-at="2017-08-22T12:29:30Z">
+        <test-method status="PASS" signature="Forgot_Password_with_invalid__user()[pri:0, instance:PR_Signup.PositivWeb@6892b3b6]" name="Forgot_Password_with_invalid__user" duration-ms="27565" started-at="2017-09-11T17:15:20Z" finished-at="2017-09-11T17:15:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Forgot_Password_with_invalid__user -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:PR_Signup.Signup_Test@2892d68]" name="afterTest" is-config="true" duration-ms="1" started-at="2017-08-22T12:29:30Z" finished-at="2017-08-22T12:29:30Z">
+        <test-method status="PASS" signature="Edit_profile()[pri:0, instance:PR_Signup.PositivWeb@6892b3b6]" name="Edit_profile" duration-ms="17159" started-at="2017-09-11T17:15:47Z" finished-at="2017-09-11T17:16:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Edit_profile -->
+        <test-method status="FAIL" signature="changePassword()[pri:0, instance:PR_Signup.PositivWeb@6892b3b6]" name="changePassword" duration-ms="2067" started-at="2017-09-11T17:16:04Z" finished-at="2017-09-11T17:16:07Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='action-button']//button[.='ChangePassword']"}
+  (Session info: chrome=60.0.3112.113)
+  (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 59 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'GATE6-70', ip: '192.168.237.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\Owner\AppData\Local\Temp\scoped_dir11336_12278}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.113, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: f5ad8c014ff5c4772e387e4debdca359
+*** Element info: {Using=xpath, value=//div[@class='action-button']//button[.='ChangePassword']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='action-button']//button[.='ChangePassword']"}
+  (Session info: chrome=60.0.3112.113)
+  (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 59 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'GATE6-70', ip: '192.168.237.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\Owner\AppData\Local\Temp\scoped_dir11336_12278}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.113, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: f5ad8c014ff5c4772e387e4debdca359
+*** Element info: {Using=xpath, value=//div[@class='action-button']//button[.='ChangePassword']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at PR_Signup.PositivWeb.changePassword(PositivWeb.java:309)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- changePassword -->
+        <test-method status="PASS" signature="updateCard()[pri:0, instance:PR_Signup.PositivWeb@6892b3b6]" name="updateCard" duration-ms="7596" started-at="2017-09-11T17:16:07Z" finished-at="2017-09-11T17:16:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateCard -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:PR_Signup.PositivWeb@6892b3b6]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-09-11T17:16:14Z" finished-at="2017-09-11T17:16:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- PR_Signup.Signup_Test -->
+      </class> <!-- PR_Signup.PositivWeb -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
