@@ -204,7 +204,7 @@ public class PositivRadioTest {
 	@Test(priority = 9)
 	public void Invalid_EmailLogin() {
 
-		driver.get("http://positivradio.test.gate6.com/web/#/login");
+		driver.get("http://positivradio.test.gate6.com/web/login");
 		driver.findElement(By.name("email")).sendKeys("manish.dangas@gate62.com");
 		driver.findElement(By.name("password")).sendKeys("gate6@123");
 		driver.findElement(By.cssSelector("button.btn.custom-btn")).click();
@@ -301,7 +301,7 @@ public class PositivRadioTest {
 		driver.findElement(By.xpath("//div[@class='action-button']//button[.='Save']")).click();
 
 		Thread.sleep(10000);
-		WebElement content = driver.findElement(By.xpath("//div[@class='p-b5']//strong[text()='Testaccount']"));
+		WebElement content = driver.findElement(By.xpath("//div[@class='p-b5']//strong[text()='Test account']"));
 		String print = content.getText();
 
 		Assert.assertEquals(print, "Test account");
@@ -312,7 +312,7 @@ public class PositivRadioTest {
 	public void changePassword() throws InterruptedException, FindFailed {
 
 		Thread.sleep(10000);
-		driver.findElement(By.xpath("//div[@class='action-button']//button[.='ChangePassword']")).click();
+		driver.findElement(By.xpath("//div[@class='action-button']//*[text()='Change Password']")).click();
 		WebElement oldPassword = driver.findElement(By.name("oldPassword"));
 		oldPassword.sendKeys("Gate6@123");
 		WebElement NewPassword = driver.findElement(By.name("password"));
@@ -326,7 +326,6 @@ public class PositivRadioTest {
 		// s.find("C:/Users/Owner/Desktop/PasswardSaved.png");
 
 	}
-
 	@Test(priority = 17)
 	public void updateCard() throws InterruptedException, FindFailed {
 
