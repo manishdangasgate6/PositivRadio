@@ -326,11 +326,13 @@ public class PositivRadioTest {
 		// s.find("C:/Users/Owner/Desktop/PasswardSaved.png");
 
 	}
+
 	@Test(priority = 17)
 	public void updateCard() throws InterruptedException, FindFailed {
 
+		Thread.sleep(4000);
 		driver.findElement(By.cssSelector("button.btn")).click();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		driver.findElement(By.id("updateCC")).click();
 
 		WebElement nameCard = driver.findElement(By.name("nameOnCard"));
@@ -357,8 +359,6 @@ public class PositivRadioTest {
 		Assert.assertEquals(print, "EXP 12/19");
 
 	}
-
-
 
 	@AfterTest
 	public void afterTest() {
