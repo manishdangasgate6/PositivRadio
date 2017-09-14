@@ -345,6 +345,7 @@ public class PositivRadioTest {
 		cardCvv.sendKeys("123");
 		WebElement zipCode = driver.findElement(By.name("zipCode"));
 		zipCode.sendKeys("11252");
+		Thread.sleep(4000);
 		driver.findElement(By.id("updateCC")).click();
 
 		Thread.sleep(4000);
