@@ -80,6 +80,7 @@ public class PositivRadioTest {
 
 	}
 
+	//
 	@Test(priority = 3)
 	public void BlankFullName() {
 
@@ -143,7 +144,8 @@ public class PositivRadioTest {
 		driver.get("http://positivradio.test.gate6.com/web/register");
 		driver.findElement(By.className("facebook")).click();
 
-		String parentWindowHandler = driver.getWindowHandle(); // Store your parent window
+		String parentWindowHandler = driver.getWindowHandle(); // Store your parent
+		// window
 		String subWindowHandler = null;
 
 		Set<String> handles = driver.getWindowHandles(); // get all window handles
@@ -244,7 +246,7 @@ public class PositivRadioTest {
 	public void Logout_Test() throws InterruptedException
 
 	{
-
+		Thread.sleep(5000);
 		driver.findElement(By.cssSelector("button.btn-signout.radius8px")).click();
 		Thread.sleep(5000);
 		driver.findElement(By.cssSelector("button.btn.default")).click();
@@ -288,6 +290,8 @@ public class PositivRadioTest {
 		Thread.sleep(2000);
 
 		driver.findElement(By.cssSelector("button.btn")).click();
+
+		Thread.sleep(4000);
 		WebElement FullName = driver.findElement(By.name("fullName"));
 		FullName.clear();
 		FullName.sendKeys("Test account");
@@ -296,16 +300,18 @@ public class PositivRadioTest {
 		Email.sendKeys("manish.dangas@gate6.com");
 		driver.findElement(By.xpath("//div[@class='action-button']//button[.='Save']")).click();
 
-		Screen s = new Screen();
+		Thread.sleep(10000);
+		WebElement content = driver.findElement(By.xpath("//div[@class='p-b5']//strong[text()='Testaccount']"));
+		String print = content.getText();
 
-		s.find("C:/Users/Owner/Desktop/Success.png"); // identify pause button
+		Assert.assertEquals(print, "Test account");
 
 	}
 
 	@Test(priority = 16)
 	public void changePassword() throws InterruptedException, FindFailed {
 
-		Thread.sleep(4000);
+		Thread.sleep(10000);
 		driver.findElement(By.xpath("//div[@class='action-button']//button[.='ChangePassword']")).click();
 		WebElement oldPassword = driver.findElement(By.name("oldPassword"));
 		oldPassword.sendKeys("Gate6@123");
@@ -315,18 +321,17 @@ public class PositivRadioTest {
 		ConfirmPassword.sendKeys("Gate6@123");
 		driver.findElement(By.xpath("//div[@class='action-button']//button[.='Save']")).click();
 
-		Screen s = new Screen();
-
-		s.find("C:/Users/Owner/Desktop/PasswardSaved.png");
+		// Screen s = new Screen();
+		//
+		// s.find("C:/Users/Owner/Desktop/PasswardSaved.png");
 
 	}
 
 	@Test(priority = 17)
 	public void updateCard() throws InterruptedException, FindFailed {
 
-		Thread.sleep(2000);
 		driver.findElement(By.cssSelector("button.btn")).click();
-
+		Thread.sleep(2000);
 		driver.findElement(By.id("updateCC")).click();
 
 		WebElement nameCard = driver.findElement(By.name("nameOnCard"));
@@ -343,18 +348,17 @@ public class PositivRadioTest {
 		zipCode.sendKeys("11252");
 		driver.findElement(By.id("updateCC")).click();
 
-		Screen s = new Screen();
+		Thread.sleep(4000);
+		WebElement content = driver
+				.findElement(By.xpath("//div[@class='col-md-5 text-center']//strong[text()='EXP  12/19']"));
+		String print = content.getText();
+		System.out.println(print);
 
-		s.find("C:/Users/Owner/Desktop/Cardinof.png");
-
-	}
-
-	@BeforeTest
-	public void beforeTest() {
-
-		driver.manage().window().maximize();
+		Assert.assertEquals(print, "EXP 12/19");
 
 	}
+
+
 
 	@AfterTest
 	public void afterTest() {
