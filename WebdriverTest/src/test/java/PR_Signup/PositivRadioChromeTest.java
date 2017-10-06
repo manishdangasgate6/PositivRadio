@@ -58,234 +58,234 @@ public class PositivRadioChromeTest {
 	// "/home/mpatil/geckodriver");
 	// public WebDriver driver = new FirefoxDriver();
 
-//	@Test(priority = 1)
-//	public void CheckApp_Status() {
-//
-//		driver.get("https://positivradio.test.gate6.com/web/login/2");
-//		driver.findElement(By.className("facebook"));
-//		System.out.print("Application is working");
-//
-//	}
-//
-//	@Test(priority = 2)
-//	public void BlankEmail() {
+	@Test(priority = 1)
+	public void CheckApp_Status() {
+
+		driver.get("https://positivradio.test.gate6.com/web/login/2");
+		driver.findElement(By.className("facebook"));
+		System.out.print("Application is working");
+
+	}
+
+	@Test(priority = 2)
+	public void BlankEmail() {
+
+		driver.get("https://positivradio.test.gate6.com/web/register/2");
+		driver.findElement(By.name("fullName")).sendKeys("Manish Dangas");
+		driver.findElement(By.id("email")).sendKeys("");
+		driver.findElement(By.name("password")).sendKeys("Gate6@123");
+		driver.findElement(By.xpath("//div[4]/div/div/button")).click();
+		String URL = driver.getCurrentUrl();
+
+		Assert.assertEquals(URL, "https://positivradio.test.gate6.com/web/register/2");
+
+	}
+
+	//
+	@Test(priority = 3)
+	public void BlankFullName() {
+
+		driver.get("https://positivradio.test.gate6.com/web/register/2");
+		driver.findElement(By.name("fullName")).sendKeys("");
+		driver.findElement(By.id("email")).sendKeys("manish.dangas@gmail.com");
+		driver.findElement(By.name("password")).sendKeys("Gate6@123");
+		driver.findElement(By.xpath("//div[4]/div/div/button")).click();
+		String URL = driver.getCurrentUrl();
+
+		Assert.assertEquals(URL, "https://positivradio.test.gate6.com/web/register/2");
+
+	}
+
+	@Test(priority = 4)
+	public void InvalidEmail() {
+
+		driver.get("https://positivradio.test.gate6.com/web/register/2");
+		driver.findElement(By.name("fullName")).sendKeys("Manish Dangas");
+		driver.findElement(By.id("email")).sendKeys("manish@.com");
+		driver.findElement(By.name("password")).sendKeys("Gate6@123");
+		driver.findElement(By.xpath("//div[4]/div/div/button")).click();
+		driver.findElement(By.id("email")).clear();
+		driver.findElement(By.id("email")).sendKeys("@.com");
+		driver.findElement(By.name("password")).sendKeys("Gate6@123");
+		driver.findElement(By.xpath("//div[4]/div/div/button")).click();
+
+	}
+
+	@Test(priority = 5)
+	public void InvalidPassword() {
+
+		driver.get("https://positivradio.test.gate6.com/web/register/2");
+		driver.findElement(By.name("fullName")).sendKeys("Manish Dangas");
+		driver.findElement(By.id("email")).sendKeys("manish.dangas@gmail.com");
+		driver.findElement(By.name("password")).sendKeys("Gate2");
+		driver.findElement(By.xpath("//div[4]/div/div/button")).click();
+		String URL = driver.getCurrentUrl();
+
+		Assert.assertEquals(URL, "https://positivradio.test.gate6.com/web/register/2");
+
+	}
+
+	@Test(priority = 6)
+	public void ValidSignup() {
+
+		driver.get("https://positivradio.test.gate6.com/web/register/2");
+		driver.findElement(By.name("fullName")).sendKeys("Manish Dangas");
+		driver.findElement(By.id("email")).sendKeys("manish.danga1212s@gmail.com");
+		driver.findElement(By.name("password")).sendKeys("Gate6@123");
+		driver.findElement(By.xpath("//div[4]/div/div/button")).click();
+		String URL = driver.getCurrentUrl();
+
+		Assert.assertEquals(URL, "https://positivradio.test.gate6.com/web/register/2");
+
+	}
+
+//	@Test(priority = 7)
+//	public void FaceBookSignup() throws InterruptedException {
 //
 //		driver.get("https://positivradio.test.gate6.com/web/register/2");
-//		driver.findElement(By.name("fullName")).sendKeys("Manish Dangas");
-//		driver.findElement(By.id("email")).sendKeys("");
-//		driver.findElement(By.name("password")).sendKeys("Gate6@123");
-//		driver.findElement(By.xpath("//div[4]/div/div/button")).click();
-//		String URL = driver.getCurrentUrl();
+//		driver.findElement(By.className("facebook")).click();
 //
-//		Assert.assertEquals(URL, "https://positivradio.test.gate6.com/web/register/2");
+//		String parentWindowHandler = driver.getWindowHandle(); // Store your parent
+//		// window
+//		String subWindowHandler = null;
+//
+//		Set<String> handles = driver.getWindowHandles(); // get all window handles
+//		Iterator<String> iterator = handles.iterator();
+//		while (iterator.hasNext()) {
+//			subWindowHandler = iterator.next();
+//		}
+//		driver.switchTo().window(subWindowHandler); // switch to popup window
+//
+//		Thread.sleep(5000);
+//		String PopURL = driver.getCurrentUrl();
+//		System.out.println("TEst" + PopURL);
+//		// Now you are in the popup window, perform necessary actions here
+//
+//		driver.findElement(By.id("email")).sendKeys("manish.dangas@gate6.com");
+//		driver.findElement(By.id("pass")).sendKeys("Gate6@321");
+//		driver.findElement(By.name("login")).click();
+//
+//		driver.switchTo().window(parentWindowHandler);
 //
 //	}
 //
-//	//
-//	@Test(priority = 3)
-//	public void BlankFullName() {
+//	@Test(priority = 8)
+//	public void GoogleSignup() throws InterruptedException {
 //
 //		driver.get("https://positivradio.test.gate6.com/web/register/2");
-//		driver.findElement(By.name("fullName")).sendKeys("");
-//		driver.findElement(By.id("email")).sendKeys("manish.dangas@gmail.com");
-//		driver.findElement(By.name("password")).sendKeys("Gate6@123");
-//		driver.findElement(By.xpath("//div[4]/div/div/button")).click();
-//		String URL = driver.getCurrentUrl();
+//		driver.findElement(By.cssSelector("button.google")).click();
 //
-//		Assert.assertEquals(URL, "https://positivradio.test.gate6.com/web/register/2");
+//		String parentWindowHandler = driver.getWindowHandle(); // Store your parent
+//		// window
+//		String subWindowHandler = null;
+//		//
+//		Set<String> handles = driver.getWindowHandles(); // get all window handles
+//		Iterator<String> iterator = handles.iterator();
+//		while (iterator.hasNext()) {
+//			subWindowHandler = iterator.next();
+//		}
+//		driver.switchTo().window(subWindowHandler); // switch to popup window
 //
-//	}
+//		Thread.sleep(5000);
+//		String PopURL = driver.getCurrentUrl();
+//		System.out.println("TEst" + PopURL);
+//		// Now you are in the popup window, perform necessary actions here
 //
-//	@Test(priority = 4)
-//	public void InvalidEmail() {
-//
-//		driver.get("https://positivradio.test.gate6.com/web/register/2");
-//		driver.findElement(By.name("fullName")).sendKeys("Manish Dangas");
-//		driver.findElement(By.id("email")).sendKeys("manish@.com");
-//		driver.findElement(By.name("password")).sendKeys("Gate6@123");
-//		driver.findElement(By.xpath("//div[4]/div/div/button")).click();
-//		driver.findElement(By.id("email")).clear();
-//		driver.findElement(By.id("email")).sendKeys("@.com");
-//		driver.findElement(By.name("password")).sendKeys("Gate6@123");
-//		driver.findElement(By.xpath("//div[4]/div/div/button")).click();
-//
-//	}
-//
-//	@Test(priority = 5)
-//	public void InvalidPassword() {
-//
-//		driver.get("https://positivradio.test.gate6.com/web/register/2");
-//		driver.findElement(By.name("fullName")).sendKeys("Manish Dangas");
-//		driver.findElement(By.id("email")).sendKeys("manish.dangas@gmail.com");
-//		driver.findElement(By.name("password")).sendKeys("Gate2");
-//		driver.findElement(By.xpath("//div[4]/div/div/button")).click();
-//		String URL = driver.getCurrentUrl();
-//
-//		Assert.assertEquals(URL, "https://positivradio.test.gate6.com/web/register/2");
-//
-//	}
-//
-//	@Test(priority = 6)
-//	public void ValidSignup() {
-//
-//		driver.get("https://positivradio.test.gate6.com/web/register/2");
-//		driver.findElement(By.name("fullName")).sendKeys("Manish Dangas");
-//		driver.findElement(By.id("email")).sendKeys("manish.danga1212s@gmail.com");
-//		driver.findElement(By.name("password")).sendKeys("Gate6@123");
-//		driver.findElement(By.xpath("//div[4]/div/div/button")).click();
-//		String URL = driver.getCurrentUrl();
-//
-//		Assert.assertEquals(URL, "https://positivradio.test.gate6.com/web/register/2");
-//
-//	}
-//
-////	@Test(priority = 7)
-////	public void FaceBookSignup() throws InterruptedException {
-////
-////		driver.get("https://positivradio.test.gate6.com/web/register/2");
-////		driver.findElement(By.className("facebook")).click();
-////
-////		String parentWindowHandler = driver.getWindowHandle(); // Store your parent
-////		// window
-////		String subWindowHandler = null;
-////
-////		Set<String> handles = driver.getWindowHandles(); // get all window handles
-////		Iterator<String> iterator = handles.iterator();
-////		while (iterator.hasNext()) {
-////			subWindowHandler = iterator.next();
-////		}
-////		driver.switchTo().window(subWindowHandler); // switch to popup window
-////
-////		Thread.sleep(5000);
-////		String PopURL = driver.getCurrentUrl();
-////		System.out.println("TEst" + PopURL);
-////		// Now you are in the popup window, perform necessary actions here
-////
-////		driver.findElement(By.id("email")).sendKeys("manish.dangas@gate6.com");
-////		driver.findElement(By.id("pass")).sendKeys("Gate6@321");
-////		driver.findElement(By.name("login")).click();
-////
-////		driver.switchTo().window(parentWindowHandler);
-////
-////	}
-////
-////	@Test(priority = 8)
-////	public void GoogleSignup() throws InterruptedException {
-////
-////		driver.get("https://positivradio.test.gate6.com/web/register/2");
-////		driver.findElement(By.cssSelector("button.google")).click();
-////
-////		String parentWindowHandler = driver.getWindowHandle(); // Store your parent
-////		// window
-////		String subWindowHandler = null;
-////		//
-////		Set<String> handles = driver.getWindowHandles(); // get all window handles
-////		Iterator<String> iterator = handles.iterator();
-////		while (iterator.hasNext()) {
-////			subWindowHandler = iterator.next();
-////		}
-////		driver.switchTo().window(subWindowHandler); // switch to popup window
-////
-////		Thread.sleep(5000);
-////		String PopURL = driver.getCurrentUrl();
-////		System.out.println("TEst" + PopURL);
-////		// Now you are in the popup window, perform necessary actions here
-////
-////		driver.findElement(By.id("identifierId")).sendKeys("gate6.info@gate6.com");
-////		driver.findElement(By.xpath(".//*[@id='identifierNext']/content/span")).click();
-////		Thread.sleep(4000);
-////		driver.findElement(By.xpath(".//*[@id='password']/div[1]/div/div[1]/input")).sendKeys("Goole2010A!!");
-////		Thread.sleep(2000);
-////		driver.findElement(By.xpath(".//*[@id='passwordNext']/content/span")).click();
-////
-////		driver.switchTo().window(parentWindowHandler);
-////
-////	}
-//
-//	@Test(priority = 9)
-//	public void Invalid_EmailLogin() {
-//
-//		driver.get("https://positivradio.test.gate6.com/web/login/2");
-//		driver.findElement(By.name("email")).sendKeys("manish.dangas@gate62.com");
-//		driver.findElement(By.name("password")).sendKeys("gate6@123");
-//		driver.findElement(By.cssSelector("button.btn.custom-btn")).click();
-//		String URL = driver.getCurrentUrl();
-//
-//		Assert.assertEquals(URL, "https://positivradio.test.gate6.com/web/login/2");
-//
-//	}
-//
-//	@Test(priority = 10)
-//	public void Invalid_PasswordLogin() {
-//
-//		driver.get("https://positivradio.test.gate6.com/web/login/2");
-//		driver.findElement(By.name("email")).sendKeys("manish.dangas@gate6.com");
-//		driver.findElement(By.name("password")).sendKeys("gatesix#12");
-//		driver.findElement(By.cssSelector("button.btn.custom-btn")).click();
-//		String URL = driver.getCurrentUrl();
-//
-//		Assert.assertEquals(URL, "https://positivradio.test.gate6.com/web/login/2");
-//
-//	}
-//
-//	@Test(priority = 11)
-//	public void Valid_Login() throws InterruptedException {
-//
-//		driver.get("https://positivradio.test.gate6.com/web/login/2");
-//		driver.findElement(By.name("email")).sendKeys("manish.dangas@gate6.com");
-//		driver.findElement(By.name("password")).sendKeys("Gate6@123");
-//		driver.findElement(By.cssSelector("button.btn.custom-btn")).click();
-//		Thread.sleep(2000);
-//
-//		String URL = driver.getCurrentUrl();
-//
-//		Assert.assertEquals(URL, "https://positivradio.test.gate6.com/web/dashboard");
-//
-//	}
-//
-//	@Test(priority = 12)
-//	public void Logout_Test() throws InterruptedException
-//
-//	{
+//		driver.findElement(By.id("identifierId")).sendKeys("gate6.info@gate6.com");
+//		driver.findElement(By.xpath(".//*[@id='identifierNext']/content/span")).click();
 //		Thread.sleep(4000);
-//		JavascriptExecutor ScrollDown = (JavascriptExecutor) driver;
-//		ScrollDown.executeScript("window.scrollBy(0,1500)", "");
-//		
+//		driver.findElement(By.xpath(".//*[@id='password']/div[1]/div/div[1]/input")).sendKeys("Goole2010A!!");
 //		Thread.sleep(2000);
-//		driver.findElement(By.xpath(
-//				"//div[@class='col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center p-tb40']//button[text()='SIGN OUT']"))
-//				.click();
-//		Thread.sleep(5000);
-//		driver.findElement(By.cssSelector("button.btn.default")).click();
-//	}
+//		driver.findElement(By.xpath(".//*[@id='passwordNext']/content/span")).click();
 //
-//	@Test(priority = 13)
-//	public void Forgot_Password_with_registerd_user() throws InterruptedException {
-//		Thread.sleep(5000);
-//		driver.get("https://positivradio.test.gate6.com/web/sendotp");
-//		driver.findElement(By.name("email")).sendKeys("ram.sagar@gate6.com");
-//		driver.findElement(By.cssSelector("button.btn.custom-btn")).click();
-//
-//		Thread.sleep(10000);
-//		String URL_OTP = driver.getCurrentUrl();
-//
-//		Assert.assertEquals("https://positivradio.test.gate6.com/web/login", URL_OTP);
+//		driver.switchTo().window(parentWindowHandler);
 //
 //	}
-//
-//	@Test(priority = 14)
-//	public void Forgot_Password_with_invalid__user() throws InterruptedException {
-//		Thread.sleep(5000);
-//		driver.get("https://positivradio.test.gate6.com/web/sendotp");
-//		driver.findElement(By.name("email")).sendKeys("t12est12@gate6.com");
-//		driver.findElement(By.cssSelector("button.btn.custom-btn")).click();
-//
-//		Thread.sleep(10000);
-//		String URL_OTP = driver.getCurrentUrl();
-//
-//		Assert.assertEquals("https://positivradio.test.gate6.com/web/sendotp", URL_OTP);
-//
-//	}
+
+	@Test(priority = 9)
+	public void Invalid_EmailLogin() {
+
+		driver.get("https://positivradio.test.gate6.com/web/login/2");
+		driver.findElement(By.name("email")).sendKeys("manish.dangas@gate62.com");
+		driver.findElement(By.name("password")).sendKeys("gate6@123");
+		driver.findElement(By.cssSelector("button.btn.custom-btn")).click();
+		String URL = driver.getCurrentUrl();
+
+		Assert.assertEquals(URL, "https://positivradio.test.gate6.com/web/login/2");
+
+	}
+
+	@Test(priority = 10)
+	public void Invalid_PasswordLogin() {
+
+		driver.get("https://positivradio.test.gate6.com/web/login/2");
+		driver.findElement(By.name("email")).sendKeys("manish.dangas@gate6.com");
+		driver.findElement(By.name("password")).sendKeys("gatesix#12");
+		driver.findElement(By.cssSelector("button.btn.custom-btn")).click();
+		String URL = driver.getCurrentUrl();
+
+		Assert.assertEquals(URL, "https://positivradio.test.gate6.com/web/login/2");
+
+	}
+
+	@Test(priority = 11)
+	public void Valid_Login() throws InterruptedException {
+
+		driver.get("https://positivradio.test.gate6.com/web/login/2");
+		driver.findElement(By.name("email")).sendKeys("manish.dangas@gate6.com");
+		driver.findElement(By.name("password")).sendKeys("Gate6@123");
+		driver.findElement(By.cssSelector("button.btn.custom-btn")).click();
+		Thread.sleep(2000);
+
+		String URL = driver.getCurrentUrl();
+
+		Assert.assertEquals(URL, "https://positivradio.test.gate6.com/web/dashboard");
+
+	}
+
+	@Test(priority = 12)
+	public void Logout_Test() throws InterruptedException
+
+	{
+		Thread.sleep(4000);
+		JavascriptExecutor ScrollDown = (JavascriptExecutor) driver;
+		ScrollDown.executeScript("window.scrollBy(0,1500)", "");
+		
+		Thread.sleep(2000);
+		driver.findElement(By.xpath(
+				"//div[@class='col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center p-tb40']//button[text()='SIGN OUT']"))
+				.click();
+		Thread.sleep(5000);
+		driver.findElement(By.cssSelector("button.btn.default")).click();
+	}
+
+	@Test(priority = 13)
+	public void Forgot_Password_with_registerd_user() throws InterruptedException {
+		Thread.sleep(5000);
+		driver.get("https://positivradio.test.gate6.com/web/sendotp");
+		driver.findElement(By.name("email")).sendKeys("ram.sagar@gate6.com");
+		driver.findElement(By.cssSelector("button.btn.custom-btn")).click();
+
+		Thread.sleep(10000);
+		String URL_OTP = driver.getCurrentUrl();
+
+		Assert.assertEquals("https://positivradio.test.gate6.com/web/login", URL_OTP);
+
+	}
+
+	@Test(priority = 14)
+	public void Forgot_Password_with_invalid__user() throws InterruptedException {
+		Thread.sleep(5000);
+		driver.get("https://positivradio.test.gate6.com/web/sendotp");
+		driver.findElement(By.name("email")).sendKeys("t12est12@gate6.com");
+		driver.findElement(By.cssSelector("button.btn.custom-btn")).click();
+
+		Thread.sleep(10000);
+		String URL_OTP = driver.getCurrentUrl();
+
+		Assert.assertEquals("https://positivradio.test.gate6.com/web/sendotp", URL_OTP);
+
+	}
 
 	@Test(priority = 15)
 	public void Edit_profile() throws InterruptedException, FindFailed {
@@ -357,7 +357,7 @@ public class PositivRadioChromeTest {
 		Thread.sleep(4000);
 		driver.findElement(By.id("updateCC")).click();
 
-		Thread.sleep(6000);
+		Thread.sleep(10000);
 		WebElement content = driver
 				.findElement(By.xpath("//div[@class='row p-t30']/div/div/div/div[3]/div[2]/div/div[2]/strong"));
 		String print = content.getText();
